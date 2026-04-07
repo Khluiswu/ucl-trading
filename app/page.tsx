@@ -1,20 +1,20 @@
-import Ticker from "@/components/Ticker";
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import StatsCard from "@/components/StatsCard";
+import Divisions from "@/components/Divisions";
+import StatsBar from "@/components/StatsBar";
+import Events from "@/components/Events";
+import CTA from "@/components/CTA";
+import Research from "@/components/Research";
+import Overview from "@/components/Overview";
 
 export default function Home() {
   return (
-    <main className="bg-black min-h-screen">
-      <Ticker />
-      <Navbar />
-
-      <div className="flex justify-between">
-        <Hero />
-        <div className="mt-40 mr-20">
-          <StatsCard />
-        </div>
-      </div>
+    <main className="bg-black">
+      <Hero />
+      <StatsBar />
+      <Overview />
+      <Divisions />
+      <Events />
+      <CTA />
     </main>
   );
 }

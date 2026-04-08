@@ -50,7 +50,7 @@ export default function CTA() {
           </a>
 
           <p className="font-mono text-xs text-gray-400 mt-6">
-            Free membership for all UCL students
+            Free Taster Memberships for all UCL students
           </p>
 
         </motion.div>

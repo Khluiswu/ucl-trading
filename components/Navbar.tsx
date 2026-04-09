@@ -53,7 +53,7 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden md:block">
           <a
-            href="#join"
+            href="/#join"
             className="px-5 py-2 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase hover:bg-yellow-400 transition"
           >
             Join Society
@@ -88,8 +88,8 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="#join"
-              className="block text-center px-5 py-2 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase mt-4"
+              href="/#join"
+              className="block text-center px-5 py-2 hover:bg-gold-bright text-black font-mono text-xs tracking-widest uppercase mt-4"
             >
               Join Society
             </a>

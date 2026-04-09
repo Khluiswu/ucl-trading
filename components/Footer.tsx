@@ -18,21 +18,21 @@ export default function Footer() {
               </span>
             </div>
 
-            <p className="text-gray-400 text-sm max-w-md">
+            <p className="text-gray-400 text-sm max-w-md tracking-wide">
               UCL’s premier trading and finance society. Bridging academic
               excellence with real-world market exposure.
             </p>
 
             <div className="flex gap-4 mt-6 text-xs text-gray-400">
-              <a href="#" className="hover:text-yellow-500">LinkedIn</a>
-              <a href="#" className="hover:text-yellow-500">Instagram</a>
-              <a href="#" className="hover:text-yellow-500">Twitter/X</a>
+              <a href="#" className="hover:text-yellow-500 tracking-widest">LinkedIn</a>
+              <a href="#" className="hover:text-yellow-500 tracking-widest">Instagram</a>
+              <a href="#" className="hover:text-yellow-500 tracking-widest">Twitter/X</a>
             </div>
           </div>
 
           {/* Navigation */}
           <div>
-            <h4 className="text-yellow-500 text-xs uppercase mb-4">
+            <h4 className="text-yellow-500 font-mono text-s tracking-widest uppercase text-primary mb-4">
               Navigation
             </h4>
 
@@ -47,7 +47,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-yellow-500 text-xs uppercase mb-4">
+            <h4 className="text-yellow-500 font-mono text-s tracking-widest uppercase text-primary mb-4">
               Contact
             </h4>
 
@@ -62,8 +62,8 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="mt-12 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between text-xs text-gray-400">
-          <p>© 2026 UCL Trading Society</p>
-          <p>EST. 2024 — LONDON</p>
+          <p>© 2026 UCL Trading Society. All rights reserved.</p>
+          <p>EST. 2026 — LONDON, UK</p>
         </div>
 
       </div>

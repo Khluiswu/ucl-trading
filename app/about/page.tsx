@@ -20,10 +20,10 @@ const team = [
 ];
 
 const stats = [
-  { label: "Founded", value: 2024, suffix: "" },
-  { label: "Active Members", value: 350, suffix: "+" },
+  { label: "Founded", value: 2026, suffix: "" },
+  { label: "Active Members", value: 100, suffix: "+" },
   { label: "Industry Partners", value: 12, suffix: "" },
-  { label: "Events Per Year", value: 24, suffix: "+" },
+  { label: "Events Per Year", value: 15, suffix: "+" },
 ];
 
 export default function AboutPage() {
@@ -53,7 +53,7 @@ export default function AboutPage() {
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-6">
-              Founded in 2024, the society connects students with industry through
+              Founded in 2026, the society connects students with industry through
               research, events, and structured divisions operating like real desks.
             </p>
 
@@ -121,7 +121,7 @@ export default function AboutPage() {
               </div>
 
               <h3 className="font-semibold text-lg">{member.name}</h3>
-              <p className="text-yellow-500 font-mono text-x mt-3">{member.role}</p>
+              <p className="text-yellow-500 font-mono uppercase text-xs mt-3 ">{member.role}</p>
               <p className="text-gray-400 text-xs">{member.division}</p>
 
               <div className="mt-4 opacity-0 group-hover:opacity-100 transition">
@@ -143,7 +143,7 @@ export default function AboutPage() {
             description="Connections across top financial institutions."
           />
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 tracking-widest">
             {[
               "Goldman Sachs",
               "Citadel",

@@ -122,8 +122,8 @@ export default function DivisionsPage() {
                       <span
                         className={`text-xs px-2 py-1 border ${
                           div.status === "RECRUITING"
-                            ? "border-green-400 text-green-400"
-                            : "border-gray-700 text-gray-400"
+                            ? "font-mono tracking-widest border-green-400 text-green-400"
+                            : "font-mono tracking-widest border-gray-700 text-gray-400"
                         }`}
                       >
                         {div.status}

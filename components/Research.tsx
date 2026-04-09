@@ -66,7 +66,7 @@ export default function Research() {
             <button
               key={div}
               onClick={() => setFilterDiv(div)}
-              className={`px-4 py-2 text-xs border ${
+              className={`px-4 py-2 font-mono tracking-widest text-xs border ${
                 filterDiv === div
                   ? "border-yellow-500 text-yellow-500"
                   : "border-gray-700 text-gray-400"
@@ -111,7 +111,7 @@ export default function Research() {
                   </div>
 
                   <div className="md:col-span-2">
-                    <span className={`px-2 py-1 text-xs border ${divisionColors[paper.division]}`}>
+                    <span className={`font-mono tracking-widest px-2 py-1 text-xs border ${divisionColors[paper.division]}`}>
                       {paper.division}
                     </span>
                   </div>

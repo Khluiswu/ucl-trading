@@ -9,7 +9,7 @@ const events = [
   {
     title: "UK Equity Outlook: Navigating Volatility in 2026",
     speaker: "Dr. Sarah Chen — Goldman Sachs",
-    date: "APR 15, 2026",
+    date: "APR 1, 2026",
     time: "18:00 GMT",
     location: "Roberts Building 309",
     tag: "EQUITIES",
@@ -93,7 +93,7 @@ export default function Events() {
                     </span>
                   </div>
 
-                  <button className="px-4 py-2 border border-yellow-500 text-yellow-500 font-mono text-xs hover:bg-yellow-500 hover:text-black transition">
+                  <button className="px-4 py-2 border border-yellow-500 text-yellow-500 font-mono text-xs uppercase tracking-wider hover:bg-yellow-500 hover:text-black transition">
                     SECURE SEAT
                   </button>
 

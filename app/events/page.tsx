@@ -11,7 +11,7 @@ const allEvents = [
     title: "UK Equity Outlook: Navigating Volatility in 2026",
     speaker: "Dr. Sarah Chen",
     firm: "Goldman Sachs",
-    date: "2026-04-15",
+    date: "2026-04-1",
     time: "18:00",
     location: "Roberts Building 309",
     tag: "EQUITIES",
@@ -72,7 +72,7 @@ export default function EventsPage() {
         />
 
         {/* FILTER */}
-        <div className="flex gap-4 mb-12">
+        <div className="flex font-mono tracking-wider gap-4 mb-12">
           {["upcoming", "past"].map((tab) => (
             <button
               key={tab}
@@ -126,7 +126,7 @@ export default function EventsPage() {
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
                           <span
-                            className={`px-2 py-1 text-xs border ${tagColors[event.tag]}`}
+                            className={`font-mono tracking-widest px-2 py-1 text-xs border ${tagColors[event.tag]}`}
                           >
                             {event.tag}
                           </span>
@@ -160,7 +160,7 @@ export default function EventsPage() {
                       </div>
 
                       {event.upcoming && (
-                        <button className="px-5 py-2.5 bg-yellow-500 text-black text-xs uppercase tracking-widest hover:bg-yellow-400 transition flex items-center gap-2">
+                        <button className="px-5 py-2.5 bg-yellow-500 font-mono text-black text-sm uppercase tracking-widest hover:bg-yellow-400 transition flex items-center gap-2">
                           SECURE SEAT <ArrowRight size={12} />
                         </button>
                       )}

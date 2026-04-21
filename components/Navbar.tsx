@@ -24,7 +24,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.jpg"
+            src="/logo.png"
             alt="UCL Trading Society Logo"
             width={32}
             height={32}

@@ -2,32 +2,32 @@
 
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/SectionHeader";
-import { TrendingUp, BarChart2, Landmark, DollarSign } from "lucide-react";
+import { TrendingUp, BarChart2, AlignHorizontalDistributeCenter, DollarSign, CopyCheck } from "lucide-react";
 
 const initiatives = [
   {
     icon: TrendingUp,
-    title: "Equities",
+    title: "Promote & Expose",
     description:
-      "Fundamental analysis across global equity markets with stock pitches and sector reports.",
+      "Our mission is to break down barriers and make trading accessible to all students, regardless of background or experience.",
   },
   {
     icon: BarChart2,
-    title: "Commodities",
+    title: "Industry Events",
     description:
-      "Energy, metals and agricultural markets with focus on supply-demand and pricing.",
+      "We aim to demystify the field by connecting students with industry professionals and their real-world insights.",
   },
   {
-    icon: Landmark,
-    title: "Fixed Income",
+    icon: AlignHorizontalDistributeCenter,
+    title: "Trading Competitions",
     description:
-      "Bond markets, credit analysis, yield curves and structured products.",
+      "These hands-on simulations help build practical capabilities and confidence in financial markets.",
   },
   {
-    icon: DollarSign,
-    title: "FX",
+    icon: CopyCheck,
+    title: "Equip & Support",
     description:
-      "Currency markets, macro strategy and central bank policy analysis.",
+      "We aim to equip members with essential technical and professional skills, while providing comprehensive support for their early career development, including guidance on applications.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function Overview() {
 
         <SectionHeader
           label="// 001 — Overview"
-          title="Our Mission"
+          title="Our mission"
           description="We connect ambitious students to the institutional world of global markets."
         />
 
@@ -72,7 +72,7 @@ export default function Overview() {
 
                 </div>
 
-                <div className="mt-6 text-xs text-yellow-500 opacity-0 group-hover:opacity-100 transition">
+                <div className="font-mono tracking-widest mt-6 text-xs text-yellow-500 opacity-0 group-hover:opacity-100 transition">
                   SECTOR_{String(index + 1).padStart(2, "0")} — ACTIVE
                 </div>
 

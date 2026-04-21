@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -19,12 +20,16 @@ export default function Navbar() {
   return (
     <nav className="fixed top-8 left-0 right-0 z-40 backdrop-blur bg-black/70 border-b border-gray-800">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        
+
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <div className="w-8 h-8 border border-yellow-500 flex items-center justify-center">
-            <span className="font-mono text-yellow-500 text-xs font-bold">TS</span>
-          </div>
+          <Image
+            src="/logo.jpg"
+            alt="UCL Trading Society Logo"
+            width={32}
+            height={32}
+            className="object-contain"
+          />
           <div className="hidden sm:block">
             <span className="text-white font-semibold text-sm tracking-wider">
               UCL TRADING
@@ -52,12 +57,12 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden md:block">
-          <a
+          <Link
             href="/#join"
             className="px-5 py-2 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase hover:bg-yellow-400 transition"
           >
             Join Society
-          </a>
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -79,20 +84,18 @@ export default function Navbar() {
                 href={link.path}
                 onClick={() => setMobileOpen(false)}
                 className={`block font-mono text-xs tracking-widest uppercase py-2 ${
-                  pathname === link.path
-                    ? "text-yellow-500"
-                    : "text-gray-400"
+                  pathname === link.path ? "text-yellow-500" : "text-gray-400"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
-            <a
+            <Link
               href="/#join"
-              className="block text-center px-5 py-2 hover:bg-gold-bright text-black font-mono text-xs tracking-widest uppercase mt-4"
+              className="block text-center px-5 py-2 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase hover:bg-yellow-400 transition mt-4"
             >
               Join Society
-            </a>
+            </Link>
           </div>
         </div>
       )}

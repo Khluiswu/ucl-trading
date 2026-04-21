@@ -6,17 +6,13 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 import { LinkIcon } from "lucide-react";
 
 const team = [
-  { name: "Kaihao Luis Wu", role: "President", division: "Executive" },
-  { name: "Rahul Shafia", role: "Treasurer", division: "Executive" },  
-  { name: "Zijia Zhao", role: "Vice President", division: "Executive" },
-  { name: "Anies Desai", role: "Head of FX", division: "FX" },
-  { name: "Wenhao Wang", role: "Head of Equities", division: "Equities" },
-  { name: "James Bridel", role: "Head of Commodities", division: "Commodities" },
-
-  
-  { name: "Maria Lopez", role: "Events Director", division: "Events" },
-  { name: "David Kim", role: "Head of Research", division: "Research" },
-  { name: "Micah Zheng", role: "Welfare Officer", division: "Welfare" }
+  { name: "Kaihao Luis Wu", role: "President", division: "Executive", linkedin: "https://www.linkedin.com/in/kaihaoluis-wu/" },
+  { name: "Rahul Shafia", role: "Treasurer", division: "Executive", linkedin: "https://www.linkedin.com/in/rahul-shafia-80016b272/" },  
+  { name: "Zijia Zhao", role: "Vice President", division: "Executive", linkedin: "https://www.linkedin.com/in/nini-zijia-zhao26/" },
+  { name: "Anies Desai", role: "Vice President", division: "Executive", linkedin: "https://www.linkedin.com/in/anies-desai/" },
+  { name: "Wenhao Wang", role: "Head of Equities", division: "Equities", linkedin: "https://www.linkedin.com/in/wenhao-wang-09b0b1234/" },
+  { name: "James Bridel", role: "Head of Commodities", division: "Commodities", linkedin: "https://www.linkedin.com/in/jamesbridel/" },
+  { name: "Micah Zheng", role: "Welfare Officer", division: "Welfare", linkedin: "https://www.linkedin.com/in/micahzheng/" }
 ];
 
 const stats = [
@@ -125,7 +121,7 @@ export default function AboutPage() {
               <p className="text-gray-400 text-xs">{member.division}</p>
 
               <div className="mt-4 opacity-0 group-hover:opacity-100 transition">
-                <a href="#" className="text-gray-400 hover:text-yellow-500">
+                <a href={member.linkedin} className="text-gray-400 hover:text-yellow-500" target="_blank" rel="noopener noreferrer">
                   <LinkIcon size={14} />
                 </a>
               </div>
@@ -139,7 +135,7 @@ export default function AboutPage() {
         <div className="mt-24">
           <SectionHeader
             label="// Network"
-            title="Partners"
+            title="Connections"
             description="Connections across top financial institutions."
           />
 
@@ -152,7 +148,7 @@ export default function AboutPage() {
               "PIMCO",
               "Morgan Stanley",
               "JPMorgan",
-              "Barclays",
+              "Bloomberg",
             ].map((firm) => (
               <div
                 key={firm}

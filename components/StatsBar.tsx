@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import AnimatedCounter from "@/components/AnimatedCounter";
 
 const stats = [
-  { label: "Members", value: 350, suffix: "+" },
-  { label: "Events Hosted", value: 24, suffix: "+" },
+  { label: "Members", value: 200, suffix: "+" },
+  { label: "Events Planned", value: 20, suffix: "+" },
   { label: "Industry Partners", value: 12, suffix: "" },
   { label: "Research Papers", value: 18, suffix: "" },
   { label: "Divisions", value: 4, suffix: "" },

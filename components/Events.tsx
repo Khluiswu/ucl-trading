@@ -2,33 +2,37 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, MapPin, Clock } from "lucide-react";
+import { ArrowRight, Mic, LineChart, Trophy, Users } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 
-const events = [
+const plannedFormats = [
   {
-    title: "UK Equity Outlook: Navigating Volatility in 2026",
-    speaker: "Dr. Sarah Chen — Goldman Sachs",
-    date: "APR 1, 2026",
-    time: "18:00 GMT",
-    location: "Roberts Building 309",
-    tag: "EQUITIES",
+    icon: Mic,
+    title: "Speaker Panels & Career Talks",
+    description:
+      "Industry professionals sharing how trading desks, funds and market-making firms actually work.",
+    tag: "INSIGHT",
   },
   {
-    title: "Commodities Supercycle: Energy & Metals in 2026",
-    speaker: "James Bridel — Trafigura",
-    date: "APR 22, 2026",
-    time: "17:30 GMT",
-    location: "Engineering Front 124",
-    tag: "COMMODITIES",
+    icon: LineChart,
+    title: "Trading & Charting Workshops",
+    description:
+      "Hands-on sessions using TradingView's professional tools — screeners, charting and economic calendars.",
+    tag: "SKILLS",
   },
   {
-    title: "Credit Markets & Duration Risk",
-    speaker: "Tom Wallace — PIMCO",
-    date: "MAY 01, 2026",
-    time: "18:00 GMT",
-    location: "Cruciform B404",
-    tag: "FIXED INCOME",
+    icon: Trophy,
+    title: "Trading Competitions",
+    description:
+      "Simulated-market competitions where members test strategies against each other in real conditions.",
+    tag: "COMPETE",
+  },
+  {
+    icon: Users,
+    title: "Socials & Networking",
+    description:
+      "Meet fellow traders across degrees and year groups — the community comes first.",
+    tag: "COMMUNITY",
   },
 ];
 
@@ -36,83 +40,84 @@ export default function Events() {
   return (
     <section className="py-32 bg-black text-white">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* HEADER */}
         <SectionHeader
-          label="// 002 — Events"
-          title="Upcoming"
-          description="Secure your seat at our next institutional-grade event."
+          label="// 003 — Events"
+          title="Inaugural Season"
+          description="We're a brand-new society, so our first events are being finalised right now. Here's what's on the launchpad for 2026/27."
         />
 
-        {/* EVENTS LIST */}
-        <div className="space-y-4">
-          {events.map((event, index) => (
-            <motion.div
-              key={event.title}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="border border-gray-800 bg-gray-900/60 p-6 md:p-8 hover:border-yellow-500 transition"
+        {/* PLANNED FORMATS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {plannedFormats.map((format, index) => {
+            const Icon = format.icon;
+
+            return (
+              <motion.div
+                key={format.title}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="border border-gray-800 bg-gray-900/60 p-6 md:p-8 hover:border-yellow-500 hover:shadow-[0_0_24px_rgba(245,185,33,0.12)] transition"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="font-mono text-xs tracking-widest px-2 py-0.5 border border-yellow-500 text-yellow-500">
+                    {format.tag}
+                  </span>
+                  <span className="font-mono text-xs text-gray-500 tracking-widest">
+                    COMING 2026/27
+                  </span>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 shrink-0 border border-gray-700 flex items-center justify-center">
+                    <Icon size={18} className="text-yellow-500" />
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1">
+                      {format.title}
+                    </h3>
+                    <p className="text-sm text-gray-400">
+                      {format.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* FOLLOW CTA */}
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
+          <p className="font-mono text-xs text-gray-400 tracking-wider">
+            BE FIRST TO KNOW WHEN DATES DROP →
+          </p>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://www.instagram.com/ucltradingsoc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs tracking-widest text-yellow-500 hover:text-yellow-400 transition"
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                
-                {/* LEFT */}
-                <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="font-mono text-xs px-2 py-0.5 border border-yellow-500 text-yellow-500">
-                      {event.tag}
-                    </span>
-                    <span className="font-mono text-xs text-gray-400">
-                      {event.date}
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl font-semibold mb-1">
-                    {event.title}
-                  </h3>
-
-                  <p className="text-sm text-gray-400">
-                    {event.speaker}
-                  </p>
-                </div>
-
-                {/* RIGHT */}
-                <div className="flex items-center gap-6 text-sm text-gray-400">
-                  
-                  <div className="flex items-center gap-1.5">
-                    <Clock size={14} />
-                    <span className="font-mono text-xs">
-                      {event.time}
-                    </span>
-                  </div>
-
-                  <div className="flex items-center gap-1.5">
-                    <MapPin size={14} />
-                    <span className="font-mono text-xs">
-                      {event.location}
-                    </span>
-                  </div>
-
-                  <button className="px-4 py-2 border border-yellow-500 text-yellow-500 font-mono text-xs uppercase tracking-wider hover:bg-yellow-500 hover:text-black transition">
-                    SECURE SEAT
-                  </button>
-
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              INSTAGRAM
+            </a>
+            <a
+              href="https://www.linkedin.com/company/ucl-trading-soc/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs tracking-widest text-yellow-500 hover:text-yellow-400 transition"
+            >
+              LINKEDIN
+            </a>
+            <Link
+              href="/events"
+              className="inline-flex items-center gap-2 font-mono text-xs tracking-widest text-yellow-500 hover:text-yellow-400 transition"
+            >
+              EVENTS PAGE <ArrowRight size={14} />
+            </Link>
+          </div>
         </div>
-
-        {/* VIEW ALL */}
-        <div className="mt-8 flex justify-center">
-          <Link
-            href="/events"
-            className="inline-flex items-center gap-2 font-mono text-xs tracking-widest text-yellow-500 hover:text-yellow-400 transition"
-          >
-            VIEW ALL EVENTS <ArrowRight size={14} />
-          </Link>
-        </div>
-
       </div>
     </section>
   );

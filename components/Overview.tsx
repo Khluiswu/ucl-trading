@@ -2,32 +2,37 @@
 
 import { motion } from "framer-motion";
 import SectionHeader from "@/components/SectionHeader";
-import { TrendingUp, BarChart2, AlignHorizontalDistributeCenter, DollarSign, CopyCheck } from "lucide-react";
+import {
+  TrendingUp,
+  Mic,
+  Swords,
+  GraduationCap,
+} from "lucide-react";
 
 const initiatives = [
   {
     icon: TrendingUp,
     title: "Promote & Expose",
     description:
-      "Our mission is to break down barriers and make trading accessible to all students, regardless of background or experience.",
+      "We break down barriers and make trading accessible to every UCL student, regardless of background, degree or prior experience.",
   },
   {
-    icon: BarChart2,
+    icon: Mic,
     title: "Industry Events",
     description:
-      "We aim to demystify the field by connecting students with industry professionals and their real-world insights.",
+      "We demystify the field by connecting students with industry professionals — speaker panels, career talks and real-world market insight.",
   },
   {
-    icon: AlignHorizontalDistributeCenter,
+    icon: Swords,
     title: "Trading Competitions",
     description:
-      "These hands-on simulations help build practical capabilities and confidence in financial markets.",
+      "Hands-on simulations and competitions that build practical capability and confidence in live-market conditions.",
   },
   {
-    icon: CopyCheck,
+    icon: GraduationCap,
     title: "Equip & Support",
     description:
-      "We aim to equip members with essential technical and professional skills, while providing comprehensive support for their early career development, including guidance on applications.",
+      "Technical workshops, professional skills and early-career support — from TradingView tooling to application guidance for trading and finance roles.",
   },
 ];
 
@@ -35,11 +40,10 @@ export default function Overview() {
   return (
     <section id="overview" className="py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-6">
-
         <SectionHeader
           label="// 001 — Overview"
-          title="Our mission"
-          description="We connect ambitious students to the institutional world of global markets."
+          title="Our Mission"
+          description="We connect ambitious students to the world of global markets — starting from day one."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -52,35 +56,28 @@ export default function Overview() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="border border-gray-800 bg-gray-900/60 p-8 hover:border-yellow-500 transition group"
+                className="border border-gray-800 bg-gray-900/60 p-8 hover:border-yellow-500 hover:shadow-[0_0_24px_rgba(245,185,33,0.12)] transition group"
               >
                 <div className="flex items-start gap-5">
-
-                  <div className="w-10 h-10 border border-gray-700 flex items-center justify-center group-hover:border-yellow-500 transition">
+                  <div className="w-10 h-10 shrink-0 border border-gray-700 flex items-center justify-center group-hover:border-yellow-500 transition">
                     <Icon size={18} className="text-yellow-500" />
                   </div>
 
                   <div>
-                    <h3 className="font-semibold text-lg mb-2">
-                      {item.title}
-                    </h3>
-
+                    <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
                     <p className="text-gray-400 text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </div>
-
                 </div>
 
                 <div className="font-mono tracking-widest mt-6 text-xs text-yellow-500 opacity-0 group-hover:opacity-100 transition">
-                  SECTOR_{String(index + 1).padStart(2, "0")} — ACTIVE
+                  PILLAR_{String(index + 1).padStart(2, "0")} — ACTIVE
                 </div>
-
               </motion.div>
             );
           })}
         </div>
-
       </div>
     </section>
   );

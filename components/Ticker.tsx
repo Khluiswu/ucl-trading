@@ -1,16 +1,19 @@
 "use client";
 
 const tickerItems = [
-  { symbol: "S&P 500", value: "5,243.77", change: "+0.87%", up: true },
-  { symbol: "FTSE 100", value: "8,147.32", change: "+0.42%", up: true },
-  { symbol: "BTC/USD", value: "69,420.15", change: "-1.23%", up: false },
-  { symbol: "EUR/USD", value: "1.0847", change: "+0.15%", up: true },
-  { symbol: "GOLD", value: "2,341.80", change: "+0.63%", up: true },
-  { symbol: "VIX", value: "13.25", change: "-2.41%", up: false },
-  { symbol: "CRUDE OIL", value: "78.45", change: "+1.12%", up: true },
-  { symbol: "GBP/USD", value: "1.2634", change: "-0.08%", up: false },
-  { symbol: "NIKKEI 225", value: "39,821.55", change: "+1.34%", up: true },
-  { symbol: "UCL TS", value: "NEXT EVENT: APR 15", change: "→", up: true },
+  { symbol: "S&P 500", value: "6,912.40", change: "+0.54%", up: true },
+  { symbol: "NASDAQ", value: "23,148.72", change: "+0.81%", up: true },
+  { symbol: "FTSE 100", value: "9,134.65", change: "+0.28%", up: true },
+  { symbol: "BTC/USD", value: "117,842.00", change: "-0.92%", up: false },
+  { symbol: "ETH/USD", value: "3,486.20", change: "+1.47%", up: true },
+  { symbol: "EUR/USD", value: "1.1742", change: "+0.11%", up: true },
+  { symbol: "GBP/USD", value: "1.3648", change: "-0.06%", up: false },
+  { symbol: "GOLD", value: "3,338.50", change: "+0.39%", up: true },
+  { symbol: "BRENT", value: "68.74", change: "-1.05%", up: false },
+  { symbol: "US 10Y", value: "4.28%", change: "-3bp", up: false },
+  { symbol: "VIX", value: "16.42", change: "+2.18%", up: true },
+  { symbol: "NIKKEI 225", value: "40,163.90", change: "+0.66%", up: true },
+  { symbol: "UCL TS", value: "RECRUITING FOUNDING MEMBERS", change: "→", up: true },
 ];
 
 export default function Ticker() {
@@ -24,7 +27,7 @@ export default function Ticker() {
             key={i}
             className="inline-flex items-center gap-2 px-6 font-mono text-xs"
           >
-            <span className="text-gray-400">{item.symbol}</span>
+            <span className="text-gray-500">{item.symbol}</span>
             <span className="text-white">{item.value}</span>
             <span className={item.up ? "text-green-400" : "text-red-500"}>
               {item.change}
@@ -32,6 +35,10 @@ export default function Ticker() {
           </span>
         ))}
       </div>
+
+      {/* Edge fades */}
+      <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-black to-transparent" />
+      <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-black to-transparent" />
     </div>
   );
 }

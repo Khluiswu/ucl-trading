@@ -26,9 +26,9 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="UCL Trading Society Logo"
-            width={32}
+            width={38}
             height={32}
-            className="object-contain"
+            className="h-8 w-auto object-contain"
           />
           <div className="hidden sm:block">
             <span className="text-white font-semibold text-sm tracking-wider">

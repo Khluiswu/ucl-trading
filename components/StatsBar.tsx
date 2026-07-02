@@ -4,18 +4,17 @@ import { motion } from "framer-motion";
 import AnimatedCounter from "@/components/AnimatedCounter";
 
 const stats = [
-  { label: "Members", value: 200, suffix: "+" },
-  { label: "Events Planned", value: 20, suffix: "+" },
-  { label: "Industry Partners", value: 12, suffix: "" },
-  { label: "Research Papers", value: 18, suffix: "" },
-  { label: "Divisions", value: 4, suffix: "" },
+  { label: "Founded", value: 2026, suffix: "", animate: false },
+  { label: "Divisions Launching", value: 4, suffix: "", animate: true },
+  { label: "Official Partner", value: 1, suffix: "", animate: true },
+  { label: "TradingView Pro Seats", value: 150, suffix: "", animate: true },
+  { label: "Committee Members", value: 7, suffix: "", animate: true },
 ];
 
 export default function StatsBar() {
   return (
     <section className="py-12 border-y border-gray-800 bg-black">
       <div className="max-w-7xl mx-auto px-6">
-        
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -30,22 +29,23 @@ export default function StatsBar() {
               transition={{ delay: index * 0.1 }}
               className="text-center"
             >
-              
               <div className="text-3xl md:text-4xl font-bold text-yellow-500">
-                <AnimatedCounter
-                  target={stat.value}
-                  suffix={stat.suffix}
-                />
+                {stat.animate ? (
+                  <AnimatedCounter target={stat.value} suffix={stat.suffix} />
+                ) : (
+                  <span className="font-mono tabular-nums">
+                    {stat.value}
+                    {stat.suffix}
+                  </span>
+                )}
               </div>
 
               <p className="font-mono text-xs text-gray-400 mt-2 tracking-wider uppercase">
                 {stat.label}
               </p>
-
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

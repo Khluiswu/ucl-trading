@@ -30,19 +30,21 @@ export const metadata: Metadata = {
     template: "%s — UCL Trading Society",
   },
   description:
-    "UCL's newest student society for financial markets, trading and quantitative analysis. Workshops, speaker events, competitions and an official TradingView partnership.",
+    "The home of financial markets at UCL — equities, commodities, fixed income and FX. Division-led research, trading workshops, competitions and industry access. Partnered with TradingView, Castleton Commodities International, Intercontinental Exchange and TraderMath.",
   keywords: [
     "UCL",
     "Trading Society",
     "finance",
     "markets",
+    "commodities",
+    "equities",
     "quantitative analysis",
     "student society",
   ],
   openGraph: {
     title: "UCL Trading Society",
     description:
-      "UCL's newest student society for financial markets, trading and quantitative analysis.",
+      "The home of financial markets at UCL — equities, commodities, fixed income and FX. Research, trading workshops and industry access.",
     type: "website",
     images: ["/logo.png"],
   },

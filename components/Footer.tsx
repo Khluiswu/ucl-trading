@@ -1,19 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import { SOCIETY_EMAIL, SOCIETY_LINKS } from "@/lib/society";
 
 const socials = [
-  {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/company/ucl-trading-soc/",
-  },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/ucltradingsoc/",
-  },
-  {
-    label: "Students' Union",
-    href: "https://studentsunionucl.org/clubs-societies/trading-society",
-  },
+  { label: "LinkedIn", href: SOCIETY_LINKS.linkedin },
+  { label: "Instagram", href: SOCIETY_LINKS.instagram },
+  { label: "Students' Union", href: SOCIETY_LINKS.studentsUnion },
 ];
 
 export default function Footer() {
@@ -37,9 +29,10 @@ export default function Footer() {
             </div>
 
             <p className="text-gray-400 text-sm max-w-md tracking-wide">
-              UCL&apos;s newest society for financial markets, trading and
-              quantitative analysis — open to all students, all backgrounds,
-              all experience levels.
+              The home of financial markets at UCL — equities, commodities,
+              fixed income and FX. Division-led research, practical trading
+              workshops and direct industry access, open to every student
+              whatever their degree or starting point.
             </p>
 
             <div className="flex gap-4 mt-6 text-xs text-gray-400">
@@ -80,8 +73,8 @@ export default function Footer() {
                 </Link>
               </p>
               <p>
-                <Link href="/research" className="hover:text-white transition">
-                  Research
+                <Link href="/insights" className="hover:text-white transition">
+                  Insights
                 </Link>
               </p>
               <p>
@@ -101,15 +94,16 @@ export default function Footer() {
             <div className="space-y-2 text-sm text-gray-400">
               <p>
                 <a
-                  href="https://studentsunionucl.org/clubs-societies/trading-society"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-yellow-500 transition"
+                  href={`mailto:${SOCIETY_EMAIL}`}
+                  className="text-white hover:text-yellow-500 transition break-all"
                 >
-                  Via Students&apos; Union UCL
+                  {SOCIETY_EMAIL}
                 </a>
               </p>
-              <p>UCL Bloomsbury Campus</p>
+              <p className="text-xs">
+                Sponsorship and member enquiries welcome
+              </p>
+              <p className="pt-2">UCL Bloomsbury Campus</p>
               <p>London, UK</p>
             </div>
           </div>

@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Home", path: "/" },
   { label: "Divisions", path: "/divisions" },
   { label: "Events", path: "/events" },
-  { label: "Research", path: "/research" },
+  { label: "Insights", path: "/insights" },
   { label: "About", path: "/about" },
 ];
 
@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3 shrink-0">
           <Image
             src="/logo.png"
             alt="UCL Trading Society Logo"
@@ -30,7 +30,7 @@ export default function Navbar() {
             height={32}
             className="h-8 w-auto object-contain"
           />
-          <div className="hidden sm:block">
+          <div className="hidden sm:block whitespace-nowrap">
             <span className="text-white font-semibold text-sm tracking-wider">
               UCL TRADING
             </span>
@@ -39,7 +39,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden lg:flex items-center gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.path}
@@ -56,10 +56,10 @@ export default function Navbar() {
         </div>
 
         {/* CTA */}
-        <div className="hidden md:block">
+        <div className="hidden lg:block shrink-0">
           <Link
             href="/#join"
-            className="px-5 py-2 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase hover:bg-yellow-400 transition"
+            className="inline-block whitespace-nowrap px-5 py-2 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase hover:bg-yellow-400 transition"
           >
             Join Society
           </Link>
@@ -67,7 +67,9 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-white"
+          className="lg:hidden text-white"
+          aria-label="Toggle navigation menu"
+          aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           ☰
@@ -76,7 +78,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-black border-t border-gray-800">
+        <div className="lg:hidden bg-black border-t border-gray-800">
           <div className="px-6 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link

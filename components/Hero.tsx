@@ -6,8 +6,8 @@ import { ArrowRight } from "lucide-react";
 
 const statusRows = [
   { label: "STATUS", value: "NEWLY ESTABLISHED", accent: "text-green-400" },
-  { label: "DIVISIONS", value: "4 LAUNCHING", accent: "text-white" },
-  { label: "OFFICIAL PARTNER", value: "TRADINGVIEW", accent: "text-white" },
+  { label: "COVERAGE", value: "EQUITIES · CMDTY · FI · FX", accent: "text-white" },
+  { label: "PARTNERS", value: "4 SIGNED", accent: "text-white" },
   { label: "MEMBERSHIP", value: "OPENING SOON", accent: "text-yellow-500" },
 ];
 
@@ -57,9 +57,10 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
               className="text-gray-400 text-lg max-w-lg mb-8"
             >
-              UCL&apos;s newest society for financial markets, trading and
-              quantitative analysis. We&apos;re building from the ground up —
-              and our founding members will shape everything that comes next.
+              The home of financial markets at UCL. We turn theory into working
+              market knowledge — across equities, commodities, fixed income and
+              FX — through division-led research, hands-on trading practice and
+              direct access to the people who trade for a living.
             </motion.p>
 
             <motion.div

@@ -6,7 +6,7 @@ import AnimatedCounter from "@/components/AnimatedCounter";
 const stats = [
   { label: "Founded", value: 2026, suffix: "", animate: false },
   { label: "Divisions Launching", value: 4, suffix: "", animate: true },
-  { label: "Official Partner", value: 1, suffix: "", animate: true },
+  { label: "Industry Partners", value: 4, suffix: "", animate: true },
   { label: "TradingView Pro Seats", value: 150, suffix: "", animate: true },
   { label: "Committee Members", value: 7, suffix: "", animate: true },
 ];

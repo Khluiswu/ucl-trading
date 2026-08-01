@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionHeader from "@/components/SectionHeader";
+import { SOCIETY_EMAIL } from "@/lib/society";
 import {
   ChevronRight,
   TrendingUp,
@@ -154,9 +155,9 @@ export default function DivisionsPage() {
 
                         {division.status === "RECRUITING" && (
                           <a
-                            href="https://www.linkedin.com/company/ucl-trading-soc/"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href={`mailto:${SOCIETY_EMAIL}?subject=${encodeURIComponent(
+                              `Application — ${division.role}`
+                            )}`}
                             onClick={(e) => e.stopPropagation()}
                             className="inline-block mt-6 px-6 py-2 bg-yellow-500 text-black font-mono text-xs uppercase tracking-widest hover:bg-yellow-400 transition"
                           >

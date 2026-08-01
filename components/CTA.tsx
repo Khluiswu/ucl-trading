@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { SOCIETY_EMAIL, SOCIETY_LINKS } from "@/lib/society";
 
 export default function CTA() {
   return (
@@ -45,7 +46,7 @@ export default function CTA() {
           </p>
 
           <a
-            href="https://studentsunionucl.org/clubs-societies/trading-society"
+            href={SOCIETY_LINKS.studentsUnion}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-10 py-5 bg-yellow-500 text-black font-mono text-sm uppercase tracking-widest hover:bg-yellow-400 transition"
@@ -56,6 +57,16 @@ export default function CTA() {
           <p className="font-mono text-xs text-gray-400 mt-6">
             Membership opening soon — join the mailing list on our Students&apos;
             Union page
+          </p>
+
+          <p className="font-mono text-xs text-gray-500 mt-4">
+            Questions?{" "}
+            <a
+              href={`mailto:${SOCIETY_EMAIL}`}
+              className="text-yellow-500 hover:text-yellow-400 transition break-all"
+            >
+              {SOCIETY_EMAIL}
+            </a>
           </p>
         </motion.div>
       </div>

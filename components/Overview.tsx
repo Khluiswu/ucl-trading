@@ -43,7 +43,7 @@ export default function Overview() {
         <SectionHeader
           label="// 001 — Overview"
           title="Our Mission"
-          description="We connect ambitious students to the world of global markets — starting from day one."
+          description="We exist to give students a genuine, working understanding of how financial markets operate — and the access to act on it."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

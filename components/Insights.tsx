@@ -38,7 +38,7 @@ export default function Insights() {
         <SectionHeader
           label="// Insights"
           title="Insights"
-          description="Interviews with market practitioners, and research written by our divisions."
+          description="Interviews with people working in the market, plus research from our own desks."
         />
 
         {/* FEATURED INTERVIEW */}
@@ -56,7 +56,7 @@ export default function Insights() {
               {/* Left rail */}
               <div className="lg:col-span-4 border-b lg:border-b-0 lg:border-r border-gray-800 p-8 flex flex-col gap-6">
                 <span className="self-start font-mono text-[10px] tracking-[0.2em] uppercase px-2 py-1 border border-yellow-500 text-yellow-500">
-                  Featured — {interviewMeta.category}
+                  Featured / {interviewMeta.category}
                 </span>
 
                 <div className="max-w-[180px]">
@@ -79,10 +79,10 @@ export default function Insights() {
                 </p>
 
                 <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-2xl">
-                  Eleven years at Trafigura, from operations to the hedge desk to
-                  physical metals trading — on how a physical trade actually
-                  works, what hedging really is, and how to break into an
-                  industry that is notoriously hard to enter.
+                  Eleven years at Trafigura, from operations through the hedge
+                  desk to physical metals trading. He walks through how a
+                  physical trade actually works, what hedging really means, and
+                  how to get into an industry that is famously hard to enter.
                 </p>
 
                 <span className="inline-flex items-center gap-2 font-mono text-xs tracking-widest uppercase text-yellow-500 group-hover:gap-3 transition-all">
@@ -95,7 +95,7 @@ export default function Insights() {
 
         {/* RESEARCH PIPELINE */}
         <h3 className="font-mono text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">
-          {"// Division Research — First Issues"}
+          {"// Division Research"}
         </h3>
 
         <div className="border border-gray-800">
@@ -129,7 +129,7 @@ export default function Insights() {
 
               <div className="md:col-span-3 md:text-right">
                 <span className="font-mono text-xs text-gray-500 tracking-widest">
-                  FIRST ISSUE — 2026/27
+                  FIRST ISSUE 2026/27
                 </span>
               </div>
             </motion.div>
@@ -149,12 +149,12 @@ export default function Insights() {
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-1">
-                Write for the founding issue
+                Write the first one
               </h3>
               <p className="text-gray-400 text-sm max-w-xl">
-                Want your name on our first research publication, or to land the
-                next interview? Analysts of all experience levels are welcome —
-                reach out and pitch an idea.
+                Fancy writing our first piece, or landing the next interview?
+                You don&apos;t need experience, just something you want to dig
+                into. Send us a pitch.
               </p>
             </div>
           </div>

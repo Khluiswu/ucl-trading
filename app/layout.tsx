@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://ucl-trading.vercel.app"),
   title: {
     default: "UCL Trading Society",
-    template: "%s — UCL Trading Society",
+    template: "%s | UCL Trading Society",
   },
   description:
-    "The home of financial markets at UCL — equities, commodities, fixed income and FX. Division-led research, trading workshops, competitions and industry access. Partnered with TradingView, Castleton Commodities International, Intercontinental Exchange and TraderMath.",
+    "A student society at UCL for anyone interested in markets. Research desks in equities, commodities, fixed income and FX, plus workshops, competitions and industry speakers. Partnered with TradingView, Castleton Commodities International, Intercontinental Exchange and TraderMath.",
   keywords: [
     "UCL",
     "Trading Society",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "UCL Trading Society",
     description:
-      "The home of financial markets at UCL — equities, commodities, fixed income and FX. Research, trading workshops and industry access.",
+      "A student society at UCL for anyone interested in markets. Four research desks, workshops, competitions and industry speakers.",
     type: "website",
     images: ["/logo.png"],
   },

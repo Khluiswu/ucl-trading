@@ -8,9 +8,9 @@ import { partners } from "@/lib/partners";
 import { SOCIETY_EMAIL } from "@/lib/society";
 
 export default function Partners({
-  label = "// 004 — Partnerships",
+  label = "// 004 / Partnerships",
   title = "Our Partners",
-  description = "We work with exchanges, merchants and platforms that shape how markets actually function — giving members tools, access and exposure from day one.",
+  description = "Four organisations backing us in our first year, from an exchange group to a physical commodities merchant.",
   className = "py-24",
 }: {
   label?: string;
@@ -73,13 +73,11 @@ export default function Partners({
               <Handshake size={18} className="text-yellow-500" />
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-1">
-                Partner with us
-              </h3>
+              <h3 className="text-lg font-semibold mb-1">Work with us</h3>
               <p className="text-gray-400 text-sm max-w-xl">
-                We&apos;re building our founding year and welcome firms who want
-                early access to UCL&apos;s markets talent. Get in touch to
-                discuss sponsorship, events or workshops.
+                If your firm wants to reach students at UCL who are serious
+                about markets, we&apos;d like to hear from you. We&apos;re open
+                to sponsorship, events and workshops.
               </p>
             </div>
           </div>

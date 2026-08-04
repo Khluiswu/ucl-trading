@@ -50,9 +50,9 @@ export default function Divisions() {
       <div className="max-w-7xl mx-auto px-6">
         {/* HEADER */}
         <SectionHeader
-          label="// 002 — Division Matrix"
+          label="// 002 / Divisions"
           title="Our Divisions"
-          description="Four research desks launching in our founding year — each covering a core asset class."
+          description="Four research desks, one per asset class. All of them start from scratch this year."
         />
 
         {/* GRID */}

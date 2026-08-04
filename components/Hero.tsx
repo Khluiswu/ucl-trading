@@ -6,7 +6,11 @@ import { ArrowRight } from "lucide-react";
 
 const statusRows = [
   { label: "STATUS", value: "NEWLY ESTABLISHED", accent: "text-green-400" },
-  { label: "COVERAGE", value: "EQUITIES · CMDTY · FI · FX", accent: "text-white" },
+  {
+    label: "COVERAGE",
+    value: "EQUITIES · CMDTY · FI · FX",
+    accent: "text-white",
+  },
   { label: "PARTNERS", value: "4 SIGNED", accent: "text-white" },
   { label: "MEMBERSHIP", value: "OPENING SOON", accent: "text-yellow-500" },
 ];
@@ -38,7 +42,7 @@ export default function Hero() {
               transition={{ duration: 0.6 }}
               className="font-mono text-xs tracking-widest uppercase text-yellow-500 mb-6 block"
             >
-              University College London — Est. 2026
+              University College London / Est. 2026
             </motion.span>
 
             <motion.h1
@@ -57,10 +61,10 @@ export default function Hero() {
               transition={{ delay: 0.3 }}
               className="text-gray-400 text-lg max-w-lg mb-8"
             >
-              The home of financial markets at UCL. We turn theory into working
-              market knowledge — across equities, commodities, fixed income and
-              FX — through division-led research, hands-on trading practice and
-              direct access to the people who trade for a living.
+              A society for anyone at UCL who wants to know how markets really
+              work. Four research desks covering equities, commodities, fixed
+              income and FX, plus workshops, competitions, and speakers who do
+              this for a living.
             </motion.p>
 
             <motion.div
@@ -99,7 +103,7 @@ export default function Hero() {
               <div className="flex items-center justify-between px-5 py-3 border-b border-gray-800">
                 <div className="flex items-center gap-2 text-green-400 text-xs font-mono uppercase tracking-widest">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                  UCLTS — Live
+                  UCLTS / Live
                 </div>
                 <span className="font-mono text-xs text-gray-600">
                   FOUNDING YEAR 2026/27

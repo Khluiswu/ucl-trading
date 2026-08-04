@@ -12,27 +12,27 @@ import {
 const initiatives = [
   {
     icon: TrendingUp,
-    title: "Promote & Expose",
+    title: "Open To Everyone",
     description:
-      "We break down barriers and make trading accessible to every UCL student, regardless of background, degree or prior experience.",
+      "Trading has a reputation for being closed off. We want the opposite here, so everything we run is open to any student, whatever you study and whether or not you've traded before.",
   },
   {
     icon: Mic,
     title: "Industry Events",
     description:
-      "We demystify the field by connecting students with industry professionals — speaker panels, career talks and real-world market insight.",
+      "Talks and panels with people who work in the industry, so you hear how a desk actually operates rather than how a textbook says it does.",
   },
   {
     icon: Swords,
-    title: "Trading Competitions",
+    title: "Competitions",
     description:
-      "Hands-on simulations and competitions that build practical capability and confidence in live-market conditions.",
+      "Simulated markets where you put your ideas up against other members. It's the quickest way to find out what you actually understand.",
   },
   {
     icon: GraduationCap,
-    title: "Equip & Support",
+    title: "Skills And Applications",
     description:
-      "Technical workshops, professional skills and early-career support — from TradingView tooling to application guidance for trading and finance roles.",
+      "Workshops on the technical side, then help with applications and interviews when you start going for trading and finance roles.",
   },
 ];
 
@@ -41,9 +41,9 @@ export default function Overview() {
     <section id="overview" className="py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
-          label="// 001 — Overview"
-          title="Our Mission"
-          description="We exist to give students a genuine, working understanding of how financial markets operate — and the access to act on it."
+          label="// 001 / Overview"
+          title="What We Do"
+          description="Four things we're building the society around."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,7 +72,7 @@ export default function Overview() {
                 </div>
 
                 <div className="font-mono tracking-widest mt-6 text-xs text-yellow-500 opacity-0 group-hover:opacity-100 transition">
-                  PILLAR_{String(index + 1).padStart(2, "0")} — ACTIVE
+                  PILLAR_{String(index + 1).padStart(2, "0")} / ACTIVE
                 </div>
               </motion.div>
             );

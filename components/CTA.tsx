@@ -31,18 +31,18 @@ export default function CTA() {
           transition={{ duration: 0.6 }}
         >
           <span className="font-mono text-xs uppercase tracking-widest text-yellow-500 mb-6 block">
-            {"// Join the Founding Cohort"}
+            {"// Membership"}
           </span>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Your Edge <br />
-            <span className="text-yellow-500">Starts Here</span>
+            Get In <br />
+            <span className="text-yellow-500">Early</span>
           </h2>
 
           <p className="text-gray-400 text-lg max-w-xl mx-auto mb-10">
-            Be part of UCL&apos;s newest trading society from day one. Founding
-            members shape our divisions, our events and our culture — and the
-            first 150 unlock TradingView&apos;s professional tools.
+            We&apos;re only just getting started, so the people who join now get
+            a real say in what this becomes. The first 150 members also get a
+            TradingView subscription.
           </p>
 
           <a
@@ -55,8 +55,8 @@ export default function CTA() {
           </a>
 
           <p className="font-mono text-xs text-gray-400 mt-6">
-            Membership opening soon — join the mailing list on our Students&apos;
-            Union page
+            Membership opens soon. Add yourself to the mailing list on our
+            Students&apos; Union page and we&apos;ll let you know.
           </p>
 
           <p className="font-mono text-xs text-gray-500 mt-4">

@@ -14,28 +14,28 @@ const plannedFormats = [
     icon: Mic,
     title: "Speaker Panels & Career Talks",
     description:
-      "Industry professionals sharing how trading desks, funds and market-making firms actually work.",
+      "People from trading desks, funds and market-making firms talking about how the job really works.",
     tag: "INSIGHT",
   },
   {
     icon: LineChart,
     title: "Trading & Charting Workshops",
     description:
-      "Hands-on sessions using TradingView's professional tools — screeners, charting and economic calendars.",
+      "Practical sessions in TradingView, covering charting, screeners and the economic calendar.",
     tag: "SKILLS",
   },
   {
     icon: Trophy,
     title: "Trading Competitions",
     description:
-      "Simulated-market competitions where members test strategies against each other in real conditions.",
+      "Simulated markets where members trade against each other and find out whose ideas hold up.",
     tag: "COMPETE",
   },
   {
     icon: Users,
     title: "Socials & Networking",
     description:
-      "Meet fellow traders across degrees and year groups — the community comes first.",
+      "Drinks, meetups and the rest of it. Half the value of a society is the people in it.",
     tag: "COMMUNITY",
   },
 ];
@@ -46,9 +46,9 @@ export default function Events() {
       <div className="max-w-7xl mx-auto px-6">
         {/* HEADER */}
         <SectionHeader
-          label="// 003 — Events"
-          title="Inaugural Season"
-          description="Our first season is taking shape. One flagship competition is already locked in, with the wider calendar to follow."
+          label="// 003 / Events"
+          title="First Season"
+          description="Our first season is coming together. One competition is confirmed already and the rest follows shortly."
         />
 
         {/* FLAGSHIP — CONFIRMED */}
@@ -79,7 +79,7 @@ export default function Events() {
                 </h3>
 
                 <p className="text-yellow-500 text-sm font-mono tracking-wider mb-4">
-                  WITH TRADERMATH × ADM (UCL MATHS SOCIETY)
+                  WITH TRADERMATH AND ADM (UCL MATHS SOCIETY)
                 </p>
 
                 {/* Collaborator lockup */}
@@ -97,10 +97,10 @@ export default function Events() {
                 </div>
 
                 <p className="text-gray-400 text-sm max-w-2xl leading-relaxed">
-                  Our first flagship event: a joint competition testing mental
-                  maths, probability and market-making instinct — the same
-                  skills trading firms assess at interview. Open to all UCL
-                  students.
+                  Our first big event. Teams go head to head on mental maths,
+                  probability and market making, which is roughly what trading
+                  firms put candidates through at interview. Open to every UCL
+                  student.
                 </p>
               </div>
             </div>
@@ -159,7 +159,7 @@ export default function Events() {
         {/* FOLLOW CTA */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
           <p className="font-mono text-xs text-gray-400 tracking-wider">
-            BE FIRST TO KNOW WHEN DATES DROP →
+            WE POST DATES HERE FIRST →
           </p>
           <div className="flex items-center gap-4">
             <a

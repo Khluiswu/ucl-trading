@@ -9,7 +9,7 @@ import {
 import { SubjectPortrait, TrafiguraMark } from "@/components/InterviewSubject";
 
 export const metadata: Metadata = {
-  title: `${interviewMeta.title} — ${interviewMeta.subtitle}`,
+  title: `${interviewMeta.title}: ${interviewMeta.subtitle}`,
   description: interviewMeta.standfirst,
 };
 
@@ -68,7 +68,7 @@ export default function InterviewPage() {
 
           <div className="mt-10 pt-6 border-t border-gray-800 font-mono text-xs tracking-widest text-gray-500 uppercase">
             Interview by{" "}
-            <span className="text-white">{interviewMeta.interviewer}</span> —
+            <span className="text-white">{interviewMeta.interviewer}</span>,
             Head of Commodities, UCL Trading Society
           </div>
         </div>
@@ -157,9 +157,9 @@ export default function InterviewPage() {
         <section className="mt-16 border border-gray-800 bg-gray-900/60 p-8 md:p-10">
           <Quote size={28} className="text-yellow-500 mb-5" />
           <p className="text-gray-300 leading-relaxed mb-6">
-            Interviews like this one are part of how we bring the industry to
-            UCL. If you want to help land the next one — or write for our
-            division research — we&apos;d like to hear from you.
+            Interviews like this are part of how we bring the industry to UCL.
+            If you want to help land the next one, or write something for one of
+            our desks, get in touch.
           </p>
 
           <div className="flex flex-wrap gap-4">

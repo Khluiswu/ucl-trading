@@ -21,7 +21,7 @@ const divisions = [
     role: "Head of Equities",
     status: "LAUNCHING",
     description:
-      "Fundamental analysis across global equity markets — valuation, stock pitches and sector research.",
+      "Fundamental analysis across global equity markets, covering valuation, stock pitches and sector research.",
     focus: ["Valuation", "Stock Pitching", "Sector Research"],
   },
   {
@@ -65,9 +65,9 @@ export default function DivisionsPage() {
     <section className="bg-black text-white py-24 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
-          label="// Division Matrix"
+          label="// Divisions"
           title="Our Divisions"
-          description="Four research desks launching across core asset classes in our founding year. Want to lead one? We're recruiting."
+          description="Four desks, one per asset class, all starting from scratch this year. Two of them still need someone to lead them."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -97,7 +97,7 @@ export default function DivisionsPage() {
                           {division.name}
                         </h3>
                         <p className="text-xs text-gray-400">
-                          {division.head} — {division.role}
+                          {division.head} / {division.role}
                         </p>
                       </div>
                     </div>
@@ -156,7 +156,7 @@ export default function DivisionsPage() {
                         {division.status === "RECRUITING" && (
                           <a
                             href={`mailto:${SOCIETY_EMAIL}?subject=${encodeURIComponent(
-                              `Application — ${division.role}`
+                              `Application: ${division.role}`
                             )}`}
                             onClick={(e) => e.stopPropagation()}
                             className="inline-block mt-6 px-6 py-2 bg-yellow-500 text-black font-mono text-xs uppercase tracking-widest hover:bg-yellow-400 transition"

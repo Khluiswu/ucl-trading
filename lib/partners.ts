@@ -41,7 +41,7 @@ export const uclts: Partner = {
  */
 export const adm: Partner = {
   slug: "adm",
-  name: "ADM — UCL Maths Society",
+  name: "ADM, UCL Maths Society",
   wordmark: "ADM",
   href: "",
   logoClass: "max-h-11",
@@ -63,7 +63,7 @@ export const partners: Partner[] = [
     invert: true,
     category: "Markets Platform",
     blurb:
-      "Professional charting, screeners and economic calendars. Our first 150 members receive access to TradingView's premium market analysis tools.",
+      "Charting, screeners and economic calendars. Our first 150 members get a TradingView subscription.",
   },
   {
     slug: "cci",
@@ -73,7 +73,7 @@ export const partners: Partner[] = [
     logoClass: "max-h-8",
     category: "Commodities Merchant",
     blurb:
-      "A leading global energy commodities merchant and infrastructure investor, trading physical and financial natural gas, power and oil markets.",
+      "A global energy commodities merchant, trading physical and financial natural gas, power and oil, and investing in the infrastructure behind it.",
   },
   {
     slug: "ice",
@@ -83,7 +83,7 @@ export const partners: Partner[] = [
     logoClass: "max-h-11",
     category: "Exchange Group",
     blurb:
-      "Operator of global exchanges and clearing houses, including the New York Stock Exchange — the infrastructure underpinning modern markets.",
+      "Runs exchanges and clearing houses around the world, the New York Stock Exchange among them.",
   },
   {
     slug: "tradermath",
@@ -94,6 +94,6 @@ export const partners: Partner[] = [
     plate: false,
     category: "Interview Preparation",
     blurb:
-      "Mental maths, market-making games and firm-specific assessment practice built for candidates targeting trading and quant roles.",
+      "Mental maths drills, market-making games and practice assessments for people going after trading and quant roles.",
   },
 ];

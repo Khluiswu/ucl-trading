@@ -49,7 +49,7 @@ export default function TeamCard({
       viewport={{ once: true }}
       transition={{ delay: index * 0.05 }}
       className="group block bg-gray-900/60 border border-gray-800 hover:border-yellow-500 hover:shadow-[0_0_20px_rgba(245,185,33,0.15)] transition-all"
-      aria-label={`${member.name}, ${member.role} — LinkedIn profile`}
+      aria-label={`${member.name}, ${member.role}, LinkedIn profile`}
     >
       {/* PORTRAIT */}
       <div className="relative aspect-square overflow-hidden bg-gray-800/60">

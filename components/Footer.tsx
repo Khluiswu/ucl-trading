@@ -29,10 +29,9 @@ export default function Footer() {
             </div>
 
             <p className="text-gray-400 text-sm max-w-md tracking-wide">
-              The home of financial markets at UCL — equities, commodities,
-              fixed income and FX. Division-led research, practical trading
-              workshops and direct industry access, open to every student
-              whatever their degree or starting point.
+              A student society at UCL for anyone interested in markets. Four
+              research desks, workshops, competitions and speakers, open to
+              every degree and every level of experience.
             </p>
 
             <div className="flex gap-4 mt-6 text-xs text-gray-400">
@@ -112,7 +111,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-12 pt-6 border-t border-gray-800 flex flex-col sm:flex-row justify-between gap-2 text-xs text-gray-400">
           <p>© 2026 UCL Trading Society. All rights reserved.</p>
-          <p className="font-mono tracking-widest">EST. 2026 — LONDON, UK</p>
+          <p className="font-mono tracking-widest">EST. 2026 / LONDON, UK</p>
         </div>
       </div>
     </footer>

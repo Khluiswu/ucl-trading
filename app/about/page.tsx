@@ -33,26 +33,24 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-              UCL Trading Society exists to give students a genuine, working
-              understanding of how financial markets operate — and the access
-              to act on it.
+              We started UCL Trading Society because there wasn&apos;t anywhere
+              on campus to properly learn how markets work.
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-6">
-              We cover equities, commodities, fixed income and FX through four
-              division-led research desks, practical trading workshops built on
-              professional tooling, and competitions that test the same skills
-              trading firms assess at interview. Alongside that, we bring the
-              industry directly to campus through speaker events and interviews
-              with people who trade these markets for a living.
+              The society runs four research desks, one each for equities,
+              commodities, fixed income and FX. Around those we put on
+              workshops, competitions, and talks with people who work in the
+              industry. Some of it is technical. Some of it is just getting in a
+              room and arguing about where oil is going.
             </p>
 
             <p className="text-gray-400 leading-relaxed">
-              Founded in 2026, we are deliberately open to every student
-              whatever their degree or starting point — from those who have
-              never opened a chart to those already preparing for trading
-              assessments. Our founding members are shaping what this society
-              becomes.
+              It doesn&apos;t matter what you study or how much you already
+              know. We have members who have never opened a chart and members
+              already sitting trading assessments. Both are welcome, and since
+              we only started in 2026, whoever joins now has a real hand in what
+              this turns into.
             </p>
 
             {/* LINE */}
@@ -102,8 +100,8 @@ export default function AboutPage() {
         {/* TEAM */}
         <SectionHeader
           label="// Committee 2026/27"
-          title="Leadership"
-          description="The founding team building the society. Every profile links through to LinkedIn."
+          title="The Committee"
+          description="Who's running things this year. Click through to any of them on LinkedIn."
         />
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -120,9 +118,10 @@ export default function AboutPage() {
           className="mt-8 border border-gray-800 bg-gray-900/40 p-6 md:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6"
         >
           <p className="text-gray-400 text-sm max-w-2xl">
-            Our Head of Commodities, James Bridel, recently interviewed{" "}
-            <span className="text-white">Samuel Basi</span> — 11 years at
-            Trafigura — on how physical commodity trading actually works.
+            James Bridel, our Head of Commodities, sat down with{" "}
+            <span className="text-white">Samuel Basi</span>, who spent 11 years
+            at Trafigura, to talk about how physical commodity trading actually
+            works.
           </p>
 
           <Link
@@ -139,7 +138,7 @@ export default function AboutPage() {
         <Partners
           label="// Partnerships"
           title="Our Partners"
-          description="The organisations backing the society in its first year."
+          description="The organisations backing us in our first year."
           className="py-0"
         />
       </div>

@@ -21,28 +21,28 @@ const plannedFormats = [
     title: "Speaker Panels & Career Talks",
     tag: "INSIGHT",
     description:
-      "Professionals from trading desks, funds and market-making firms sharing how the industry really works.",
+      "People from trading desks, funds and market-making firms talking about how the job really works.",
   },
   {
     icon: LineChart,
     title: "Trading & Charting Workshops",
     tag: "SKILLS",
     description:
-      "Hands-on sessions built around TradingView's professional tools — charting, screeners and economic calendars.",
+      "Practical sessions in TradingView, covering charting, screeners and the economic calendar.",
   },
   {
     icon: Trophy,
     title: "Trading Competitions",
     tag: "COMPETE",
     description:
-      "Simulated-market competitions where members put strategies to the test against each other.",
+      "Simulated markets where members trade against each other and find out whose ideas hold up.",
   },
   {
     icon: Users,
     title: "Socials & Networking",
     tag: "COMMUNITY",
     description:
-      "Casual meetups across degrees and year groups — because the network matters as much as the knowledge.",
+      "Drinks, meetups and the rest of it. Half the value of a society is the people in it.",
   },
 ];
 
@@ -62,9 +62,9 @@ export default function EventsPage() {
     <section className="bg-black text-white py-24 min-h-screen">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
-          label="// Event Ledger"
+          label="// Events"
           title="Events"
-          description="Our inaugural season for 2026/27. One flagship competition is confirmed; the rest of the calendar is being finalised."
+          description="Our first season, 2026/27. One competition is confirmed and the rest of the calendar is close behind."
         />
 
         {/* FILTER */}
@@ -113,7 +113,7 @@ export default function EventsPage() {
                     </h3>
 
                     <p className="text-yellow-500 text-sm font-mono tracking-wider mb-4">
-                      WITH TRADERMATH × ADM (UCL MATHS SOCIETY)
+                      WITH TRADERMATH AND ADM (UCL MATHS SOCIETY)
                     </p>
 
                     {/* Collaborator lockup */}
@@ -135,11 +135,12 @@ export default function EventsPage() {
                     </div>
 
                     <p className="text-gray-400 text-sm max-w-2xl leading-relaxed mb-5">
-                      Our first flagship event, run jointly with TraderMath and
-                      ADM, UCL&apos;s maths society. Teams compete on mental
-                      maths, probability and market-making games — the same
-                      skills trading firms assess at interview. Open to all UCL
-                      students, no prior markets experience required.
+                      Our first big event, run with TraderMath and ADM,
+                      UCL&apos;s maths society. Teams go head to head on mental
+                      maths, probability and market-making games, which is
+                      roughly what trading firms put candidates through at
+                      interview. Open to every UCL student, and you don&apos;t
+                      need any markets experience to enter.
                     </p>
 
                     <div className="flex flex-wrap gap-2">
@@ -228,8 +229,8 @@ export default function EventsPage() {
               className="mt-10 border border-gray-800 bg-gray-900/40 p-8 text-center"
             >
               <p className="text-gray-400 text-sm mb-4">
-                Dates and speakers announced first on our socials and the
-                Students&apos; Union mailing list.
+                We announce dates and speakers on our socials and the
+                Students&apos; Union mailing list before anywhere else.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <a
@@ -267,10 +268,10 @@ export default function EventsPage() {
             className="border border-gray-800 bg-gray-900/40 p-16 text-center"
           >
             <CalendarDays size={32} className="text-gray-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">No past events — yet</h3>
+            <h3 className="text-xl font-semibold mb-2">Nothing here yet</h3>
             <p className="text-gray-400 text-sm max-w-md mx-auto">
-              We were founded in 2026 and our first season starts soon. This
-              ledger fills up from here.
+              We only started in 2026 and the first season hasn&apos;t run.
+              Check back once it has.
             </p>
           </motion.div>
         )}

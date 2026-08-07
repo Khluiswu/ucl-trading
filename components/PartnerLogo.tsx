@@ -1,7 +1,7 @@
 "use client";
 
 import { useImageWithFallback } from "@/lib/useImageWithFallback";
-import type { Partner } from "@/lib/partners";
+import type { Org } from "@/lib/partners";
 
 /**
  * Renders a partner logo from /public/partners/<slug>.(svg|png|webp|jpg).
@@ -22,7 +22,7 @@ export default function PartnerLogo({
   logoClass,
   pad = "px-4 py-2.5",
 }: {
-  partner: Partner;
+  partner: Org;
   className?: string;
   height?: string;
   /** Override the per-partner height cap — pass "max-h-full" in compact slots. */

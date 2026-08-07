@@ -4,27 +4,33 @@ Everything below has a graceful fallback, so the site never shows a broken
 image. Drop a file in with the right name and it appears automatically — no
 code changes needed.
 
-## Partner logos → `public/partners/`
+## Sponsor and partner logos → `public/partners/`
 
 Resolved in order: `<slug>.svg`, `.png`, `.webp`, then `.jpg`. Without a file,
 the tile renders a typographic wordmark.
 
-| File               | Organisation                        | Treatment            |
-| ------------------ | ----------------------------------- | -------------------- |
-| `tradingview.webp` | TradingView                         | Bare — inverted white |
-| `cci.jpg`          | Castleton Commodities International  | White plate          |
-| `ice.png`          | Intercontinental Exchange           | White plate          |
-| `tradermath.svg`   | TraderMath                          | Bare — recoloured    |
-| `uclts.png`        | UCL Trading Society (our own mark)  | Bare — already white |
-| `adm.png`          | ADM — UCL Maths Society             | Bare — inverted white |
+**Sponsors pay a fee. Partners give services rather than money.** The two are
+listed separately in `lib/partners.ts` (`sponsors` and `partners`) and shown as
+separate groups on the site. Keep that distinction when adding anyone new.
 
-ADM and UCLTS are not society partners; they appear only on the Maths & Trading
-Competition card.
+| File                | Organisation                        | Type      | Treatment           |
+| ------------------- | ----------------------------------- | --------- | ------------------- |
+| `jane-street.png`   | Jane Street                         | Sponsor   | Bare, inverted white |
+| `cci.jpg`           | Castleton Commodities International  | Sponsor   | White plate         |
+| `tradingview.webp`  | TradingView                         | Partner   | Bare, inverted white |
+| `ice.png`           | Intercontinental Exchange           | Partner   | White plate         |
+| `tradermath.svg`    | TraderMath                          | Partner   | Bare, recoloured    |
+| `uclts.png`         | UCL Trading Society (our own mark)  | Us        | Bare, already white |
+| `adm.png`           | ADM, UCL Maths Society              | Collab    | Bare, inverted white |
+
+ADM and UCLTS are neither sponsors nor partners; they appear only on the Maths
+& Trading Competition card.
 
 ### Why two treatments
 
-Single-colour marks render **bare on the black page**, set to white — that's the
-cleaner look. TradingView and ADM are solid black, so a CSS `invert` flips them.
+Single-colour marks render **bare on the black page**, set to white, which is
+the cleaner look. Jane Street, TradingView and ADM are solid black, so a CSS
+`invert` flips them.
 TraderMath was an SVG with dark grey text, so its wordmark fill was edited to
 white directly in `public/partners/tradermath.svg` while the red arrow keeps its
 brand colours (inverting the whole file would have turned the red cyan).

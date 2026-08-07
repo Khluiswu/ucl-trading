@@ -11,7 +11,11 @@ const statusRows = [
     value: "EQUITIES · CMDTY · FI · FX",
     accent: "text-white",
   },
-  { label: "PARTNERS", value: "4 SIGNED", accent: "text-white" },
+  {
+    label: "BACKING",
+    value: "2 SPONSORS · 3 PARTNERS",
+    accent: "text-white",
+  },
   { label: "MEMBERSHIP", value: "OPENING SOON", accent: "text-yellow-500" },
 ];
 
@@ -64,7 +68,7 @@ export default function Hero() {
               A society for anyone at UCL who wants to know how markets really
               work. Four research desks covering equities, commodities, fixed
               income and FX, plus workshops, competitions, and speakers who do
-              this for a living.
+              this professionally.
             </motion.p>
 
             <motion.div

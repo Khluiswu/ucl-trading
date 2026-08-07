@@ -6,7 +6,7 @@ import Link from "next/link";
 import SectionHeader from "@/components/SectionHeader";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import TeamCard from "@/components/TeamCard";
-import Partners from "@/components/Partners";
+import Supporters from "@/components/Supporters";
 import { team } from "@/lib/team";
 import { ArrowRight } from "lucide-react";
 
@@ -14,7 +14,7 @@ const stats = [
   { label: "Founded", value: 2026, suffix: "", animate: false },
   { label: "Committee Members", value: 7, suffix: "", animate: true },
   { label: "Divisions Launching", value: 4, suffix: "", animate: true },
-  { label: "Industry Partners", value: 4, suffix: "", animate: true },
+  { label: "Sponsors & Partners", value: 5, suffix: "", animate: true },
 ];
 
 export default function AboutPage() {
@@ -133,14 +133,9 @@ export default function AboutPage() {
         </motion.div>
       </div>
 
-      {/* PARTNERS */}
+      {/* SPONSORS & PARTNERS */}
       <div className="mt-24">
-        <Partners
-          label="// Partnerships"
-          title="Our Partners"
-          description="The organisations backing us in our first year."
-          className="py-0"
-        />
+        <Supporters label="// Support" className="py-0" />
       </div>
     </section>
   );

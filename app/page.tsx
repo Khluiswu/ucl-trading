@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero";
-import PartnerStrip from "@/components/PartnerStrip";
+import SupporterStrip from "@/components/SupporterStrip";
 import Divisions from "@/components/Divisions";
 import StatsBar from "@/components/StatsBar";
 import Events from "@/components/Events";
-import Partners from "@/components/Partners";
+import Supporters from "@/components/Supporters";
 import CTA from "@/components/CTA";
 import Overview from "@/components/Overview";
 
@@ -11,12 +11,12 @@ export default function Home() {
   return (
     <main className="bg-black">
       <Hero />
-      <PartnerStrip />
+      <SupporterStrip />
       <StatsBar />
       <Overview />
       <Divisions />
       <Events />
-      <Partners />
+      <Supporters />
       <CTA />
     </main>
   );

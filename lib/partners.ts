@@ -1,4 +1,4 @@
-export type Partner = {
+export type Org = {
   slug: string;
   name: string;
   /** Compact label used in the logo lockup when no image asset is present. */
@@ -23,47 +23,23 @@ export type Partner = {
   invert?: boolean;
 };
 
-/** The society itself, for co-branded lockups such as the competition card. */
-export const uclts: Partner = {
-  slug: "uclts",
-  name: "UCL Trading Society",
-  wordmark: "UCL Trading Society",
-  href: "",
-  logoClass: "max-h-11",
-  plate: false,
-  category: "Host",
-  blurb: "UCL Trading Society.",
-};
-
 /**
- * UCL's maths society, our collaborator on the Maths & Trading Competition.
- * Not a society partner, so it is kept out of the `partners` list.
+ * Sponsors pay a fee to support the society. Partners contribute tools,
+ * access or training rather than money. The distinction is deliberate and
+ * should be preserved wherever these are shown.
  */
-export const adm: Partner = {
-  slug: "adm",
-  name: "ADM, UCL Maths Society",
-  wordmark: "ADM",
-  href: "",
-  logoClass: "max-h-11",
-  plate: false,
-  invert: true,
-  category: "Collaborator",
-  blurb:
-    "UCL's mathematics society, joining us to run the Maths & Trading Competition.",
-};
-
-export const partners: Partner[] = [
+export const sponsors: Org[] = [
   {
-    slug: "tradingview",
-    name: "TradingView",
-    wordmark: "TradingView",
-    href: "https://www.tradingview.com/",
-    logoClass: "max-h-10",
+    slug: "jane-street",
+    name: "Jane Street",
+    wordmark: "Jane Street",
+    href: "https://www.janestreet.com/",
+    logoClass: "max-h-7",
     plate: false,
     invert: true,
-    category: "Markets Platform",
+    category: "Quantitative Trading",
     blurb:
-      "Charting, screeners and economic calendars. Our first 150 members get a TradingView subscription.",
+      "A global quantitative trading firm and liquidity provider, active in equities, ETFs, bonds, options and commodities across markets worldwide.",
   },
   {
     slug: "cci",
@@ -74,6 +50,21 @@ export const partners: Partner[] = [
     category: "Commodities Merchant",
     blurb:
       "A global energy commodities merchant, trading physical and financial natural gas, power and oil, and investing in the infrastructure behind it.",
+  },
+];
+
+export const partners: Org[] = [
+  {
+    slug: "tradingview",
+    name: "TradingView",
+    wordmark: "TradingView",
+    href: "https://www.tradingview.com/blog/en/university-college-london-59143/",
+    logoClass: "max-h-10",
+    plate: false,
+    invert: true,
+    category: "Markets Platform",
+    blurb:
+      "Charting, screeners and economic calendars. Our first 150 members get a TradingView subscription.",
   },
   {
     slug: "ice",
@@ -97,3 +88,35 @@ export const partners: Partner[] = [
       "Mental maths drills, market-making games and practice assessments for people going after trading and quant roles.",
   },
 ];
+
+/** Everyone backing the society, for counts and listings. */
+export const allSupporters: Org[] = [...sponsors, ...partners];
+
+/** The society itself, for co-branded lockups such as the competition card. */
+export const uclts: Org = {
+  slug: "uclts",
+  name: "UCL Trading Society",
+  wordmark: "UCL Trading Society",
+  href: "",
+  logoClass: "max-h-11",
+  plate: false,
+  category: "Host",
+  blurb: "UCL Trading Society.",
+};
+
+/**
+ * UCL's maths society, our collaborator on the Maths & Trading Competition.
+ * Neither a sponsor nor a partner, so it is kept out of both lists.
+ */
+export const adm: Org = {
+  slug: "adm",
+  name: "ADM, UCL Maths Society",
+  wordmark: "ADM",
+  href: "",
+  logoClass: "max-h-11",
+  plate: false,
+  invert: true,
+  category: "Collaborator",
+  blurb:
+    "UCL's mathematics society, joining us to run the Maths & Trading Competition.",
+};

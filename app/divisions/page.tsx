@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import SectionHeader from "@/components/SectionHeader";
-import { SOCIETY_EMAIL } from "@/lib/society";
 import {
   ChevronRight,
   TrendingUp,
@@ -19,7 +18,7 @@ const divisions = [
     icon: TrendingUp,
     head: "Wenhao Wang",
     role: "Head of Equities",
-    status: "LAUNCHING",
+    status: "2026/27",
     description:
       "Fundamental analysis across global equity markets, covering valuation, stock pitches and sector research.",
     focus: ["Valuation", "Stock Pitching", "Sector Research"],
@@ -30,7 +29,7 @@ const divisions = [
     icon: BarChart2,
     head: "James Bridel",
     role: "Head of Commodities",
-    status: "LAUNCHING",
+    status: "2026/27",
     description:
       "Energy, metals and agricultural markets with a strong macro and supply-chain focus.",
     focus: ["Energy", "Metals", "Agriculture"],
@@ -41,7 +40,7 @@ const divisions = [
     icon: Landmark,
     head: "TBA",
     role: "Head of Fixed Income",
-    status: "RECRUITING",
+    status: "2026/27",
     description: "Bond markets, credit analysis and yield curve strategies.",
     focus: ["Bonds", "Credit", "Yield Curve"],
   },
@@ -51,7 +50,7 @@ const divisions = [
     icon: DollarSign,
     head: "TBA",
     role: "Head of FX",
-    status: "RECRUITING",
+    status: "2026/27",
     description:
       "Currency markets, macro positioning and central bank analysis.",
     focus: ["G10 FX", "EM FX", "Carry"],
@@ -67,7 +66,7 @@ export default function DivisionsPage() {
         <SectionHeader
           label="// Divisions"
           title="Our Divisions"
-          description="Four desks, one per asset class, all starting from scratch this year. Two of them still need someone to lead them."
+          description="Four research desks spanning the major asset classes."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -104,11 +103,7 @@ export default function DivisionsPage() {
 
                     <div className="flex items-center gap-2">
                       <span
-                        className={`font-mono tracking-widest text-xs px-2 py-1 border ${
-                          division.status === "RECRUITING"
-                            ? "border-green-400 text-green-400"
-                            : "border-yellow-500/60 text-yellow-500"
-                        }`}
+                        className="font-mono tracking-widest text-xs px-2 py-1 border border-yellow-500/60 text-yellow-500"
                       >
                         {division.status}
                       </span>
@@ -152,18 +147,6 @@ export default function DivisionsPage() {
                             </span>
                           ))}
                         </div>
-
-                        {division.status === "RECRUITING" && (
-                          <a
-                            href={`mailto:${SOCIETY_EMAIL}?subject=${encodeURIComponent(
-                              `Application: ${division.role}`
-                            )}`}
-                            onClick={(e) => e.stopPropagation()}
-                            className="inline-block mt-6 px-6 py-2 bg-yellow-500 text-black font-mono text-xs uppercase tracking-widest hover:bg-yellow-400 transition"
-                          >
-                            Apply to Lead
-                          </a>
-                        )}
                       </div>
                     </motion.div>
                   )}

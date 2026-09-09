@@ -62,7 +62,7 @@ export default function Supporters({
         <SectionHeader
           label={label}
           title="Sponsors & Partners"
-          description="Five organisations backing us in our first year, from a quant trading firm to an exchange group."
+          description="Backed by leading organisations across quantitative trading, energy markets, financial infrastructure and market technology."
         />
 
         {/* SPONSORS */}
@@ -71,7 +71,7 @@ export default function Supporters({
           note="Firms funding the society directly."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
           {sponsors.map((org, index) => (
             <OrgCard key={org.slug} org={org} index={index} />
           ))}
@@ -83,7 +83,7 @@ export default function Supporters({
           note="Firms giving us tools, access and training rather than funding."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {partners.map((org, index) => (
             <OrgCard key={org.slug} org={org} index={index} />
           ))}

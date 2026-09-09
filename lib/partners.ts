@@ -3,6 +3,8 @@ export type Org = {
   name: string;
   /** Compact label used in the logo lockup when no image asset is present. */
   wordmark: string;
+  /** Exact asset filename when an organisation supplies a specific logo file. */
+  logoFile?: string;
   href: string;
   category: string;
   blurb: string;
@@ -30,6 +32,18 @@ export type Org = {
  */
 export const sponsors: Org[] = [
   {
+    slug: "hrt",
+    name: "Hudson River Trading",
+    wordmark: "HRT",
+    logoFile: "hrt.png",
+    href: "https://www.hudsonrivertrading.com/",
+    logoClass: "max-h-11",
+    plate: false,
+    category: "Quantitative Trading",
+    blurb:
+      "A multi-asset class quantitative trading firm and liquidity provider, combining mathematics, technology and research across global markets.",
+  },
+  {
     slug: "jane-street",
     name: "Jane Street",
     wordmark: "Jane Street",
@@ -54,6 +68,18 @@ export const sponsors: Org[] = [
 ];
 
 export const partners: Org[] = [
+  {
+    slug: "ibkr",
+    name: "Interactive Brokers",
+    wordmark: "Interactive Brokers",
+    logoFile: "ibkr.png",
+    href: "https://www.interactivebrokers.com/",
+    logoClass: "max-h-12",
+    plate: false,
+    category: "Global Brokerage",
+    blurb:
+      "A global brokerage platform offering market access, trading tools and investment products across asset classes.",
+  },
   {
     slug: "tradingview",
     name: "TradingView",

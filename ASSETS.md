@@ -1,8 +1,8 @@
 # Image assets
 
 Everything below has a graceful fallback, so the site never shows a broken
-image. Drop a file in with the right name and it appears automatically — no
-code changes needed.
+image. Most files are resolved from the organisation slug; supplied assets can
+also be pinned to an exact filename in `lib/partners.ts`.
 
 ## Sponsor and partner logos → `public/partners/`
 
@@ -15,11 +15,13 @@ separate groups on the site. Keep that distinction when adding anyone new.
 
 | File                | Organisation                        | Type      | Treatment           |
 | ------------------- | ----------------------------------- | --------- | ------------------- |
+| `hrt.png`           | Hudson River Trading                | Sponsor   | Bare, supplied full-colour mark |
 | `jane-street.png`   | Jane Street                         | Sponsor   | Bare, inverted white |
 | `cci.jpg`           | Castleton Commodities International  | Sponsor   | White plate         |
 | `tradingview.webp`  | TradingView                         | Partner   | Bare, inverted white |
 | `ice.png`           | Intercontinental Exchange           | Partner   | White plate         |
 | `tradermath.svg`    | TraderMath                          | Partner   | Bare, recoloured    |
+| `ibkr.png`          | Interactive Brokers                 | Partner   | Bare, supplied full-colour mark |
 | `uclts.png`         | UCL Trading Society (our own mark)  | Us        | Bare, already white |
 | `adm.png`           | ADM, UCL Maths Society              | Collab    | Bare, inverted white |
 

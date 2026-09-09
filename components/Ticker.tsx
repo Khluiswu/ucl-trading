@@ -13,14 +13,16 @@ const tickerItems = [
   { symbol: "US 10Y", value: "4.28%", change: "-3bp", up: false },
   { symbol: "VIX", value: "16.42", change: "+2.18%", up: true },
   { symbol: "NIKKEI 225", value: "40,163.90", change: "+0.66%", up: true },
-  { symbol: "UCL TS", value: "RECRUITING FOUNDING MEMBERS", change: "→", up: true },
 ];
 
 export default function Ticker() {
   const items = [...tickerItems, ...tickerItems];
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 h-8 bg-black border-b border-gray-800 overflow-hidden">
+    <div
+      aria-label="Market price ticker"
+      className="fixed top-0 left-0 right-0 z-50 h-8 bg-black border-b border-gray-800 overflow-hidden"
+    >
       <div className="flex items-center h-full whitespace-nowrap animate-scroll">
         {items.map((item, i) => (
           <span

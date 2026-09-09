@@ -6,6 +6,7 @@ import { ArrowRight, Mic, LineChart, Trophy, Users, Sigma } from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 import PartnerLogo from "@/components/PartnerLogo";
 import { adm, uclts, partners } from "@/lib/partners";
+import { SOCIETY_LINKS } from "@/lib/society";
 
 const tradermath = partners.find((p) => p.slug === "tradermath")!;
 
@@ -47,8 +48,8 @@ export default function Events() {
         {/* HEADER */}
         <SectionHeader
           label="// 003 / Events"
-          title="First Season"
-          description="Our first season is coming together. One competition is confirmed already and the rest follows shortly."
+          title="2026/27 Programme"
+          description="Competitions, technical workshops and conversations with people working across global markets."
         />
 
         {/* FLAGSHIP — CONFIRMED */}
@@ -97,7 +98,7 @@ export default function Events() {
                 </div>
 
                 <p className="text-gray-400 text-sm max-w-2xl leading-relaxed">
-                  Our first big event. Teams go head to head on mental maths,
+                  Our flagship quantitative competition. Teams go head to head on mental maths,
                   probability and market making, which is roughly what trading
                   firms put candidates through at interview. Open to every UCL
                   student.
@@ -133,7 +134,7 @@ export default function Events() {
                     {format.tag}
                   </span>
                   <span className="font-mono text-xs text-gray-500 tracking-widest">
-                    COMING 2026/27
+                    2026/27 PROGRAMME
                   </span>
                 </div>
 
@@ -163,20 +164,20 @@ export default function Events() {
           </p>
           <div className="flex items-center gap-4">
             <a
-              href="https://www.instagram.com/ucltradingsoc/"
+              href={SOCIETY_LINKS.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs tracking-widest text-yellow-500 hover:text-yellow-400 transition"
+            >
+              WHATSAPP
+            </a>
+            <a
+              href={SOCIETY_LINKS.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="font-mono text-xs tracking-widest text-yellow-500 hover:text-yellow-400 transition"
             >
               INSTAGRAM
-            </a>
-            <a
-              href="https://www.linkedin.com/company/ucl-trading-soc/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-mono text-xs tracking-widest text-yellow-500 hover:text-yellow-400 transition"
-            >
-              LINKEDIN
             </a>
             <Link
               href="/events"

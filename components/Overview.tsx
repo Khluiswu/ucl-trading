@@ -20,7 +20,7 @@ const initiatives = [
     icon: Mic,
     title: "Industry Events",
     description:
-      "Talks and panels with people who work in the industry, so you hear how a desk actually operates rather than how a textbook says it does.",
+      "Office visits, talks and panels with people who work in the industry, so you see how firms and desks actually operate rather than how a textbook says they do.",
   },
   {
     icon: Swords,
@@ -69,10 +69,6 @@ export default function Overview() {
                       {item.description}
                     </p>
                   </div>
-                </div>
-
-                <div className="font-mono tracking-widest mt-6 text-xs text-yellow-500 opacity-0 group-hover:opacity-100 transition">
-                  PILLAR_{String(index + 1).padStart(2, "0")} / ACTIVE
                 </div>
               </motion.div>
             );

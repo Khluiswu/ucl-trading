@@ -3,6 +3,7 @@ import Image from "next/image";
 import { SOCIETY_EMAIL, SOCIETY_LINKS } from "@/lib/society";
 
 const socials = [
+  { label: "WhatsApp", href: SOCIETY_LINKS.whatsapp },
   { label: "LinkedIn", href: SOCIETY_LINKS.linkedin },
   { label: "Instagram", href: SOCIETY_LINKS.instagram },
   { label: "Students' Union", href: SOCIETY_LINKS.studentsUnion },
@@ -19,9 +20,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="UCL Trading Society Logo"
-                width={38}
-                height={32}
-                className="h-8 w-auto object-contain"
+                width={40}
+                height={35}
+                className="object-contain"
               />
               <span className="font-semibold tracking-wider">
                 UCL TRADING SOCIETY

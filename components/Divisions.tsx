@@ -52,7 +52,7 @@ export default function Divisions() {
         <SectionHeader
           label="// 002 / Divisions"
           title="Our Divisions"
-          description="Four research desks, one per asset class. All of them start from scratch this year."
+          description="Four research desks spanning the major asset classes, built around rigorous analysis and collaborative learning."
         />
 
         {/* GRID */}
@@ -94,7 +94,7 @@ export default function Divisions() {
 
                 {/* STATUS */}
                 <span className="inline-block font-mono text-xs tracking-widest px-2 py-1 border border-green-400/60 text-green-400">
-                  LAUNCHING 2026/27
+                  2026/27 PROGRAMME
                 </span>
 
                 {/* EXPANDED */}

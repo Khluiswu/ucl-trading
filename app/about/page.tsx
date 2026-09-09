@@ -9,12 +9,13 @@ import TeamCard from "@/components/TeamCard";
 import Supporters from "@/components/Supporters";
 import { team } from "@/lib/team";
 import { ArrowRight } from "lucide-react";
+import { sponsors, partners } from "@/lib/partners";
 
 const stats = [
-  { label: "Founded", value: 2026, suffix: "", animate: false },
+  { label: "Research Divisions", value: 4, suffix: "", animate: true },
   { label: "Committee Members", value: 7, suffix: "", animate: true },
-  { label: "Divisions Launching", value: 4, suffix: "", animate: true },
-  { label: "Sponsors & Partners", value: 5, suffix: "", animate: true },
+  { label: "Sponsors", value: sponsors.length, suffix: "", animate: true },
+  { label: "Industry Partners", value: partners.length, suffix: "", animate: true },
 ];
 
 export default function AboutPage() {
@@ -33,8 +34,8 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-              We started UCL Trading Society because there wasn&apos;t anywhere
-              on campus to properly learn how markets work.
+              UCL Trading Society is the university&apos;s student-led community
+              for understanding how markets work in practice.
             </p>
 
             <p className="text-gray-400 leading-relaxed mb-6">
@@ -46,11 +47,10 @@ export default function AboutPage() {
             </p>
 
             <p className="text-gray-400 leading-relaxed">
-              It doesn&apos;t matter what you study or how much you already
-              know. We have members who have never opened a chart and members
-              already sitting trading assessments. Both are welcome, and since
-              we only started in 2026, whoever joins now has a real hand in what
-              this turns into.
+              It doesn&apos;t matter what you study or how much you already know.
+              We bring together students opening a chart for the first time and
+              students already sitting trading assessments. Both are welcome,
+              and both have something useful to contribute.
             </p>
 
             {/* LINE */}

@@ -4,6 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import { SOCIETY_LINKS } from "@/lib/society";
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -26,9 +28,9 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="UCL Trading Society Logo"
-            width={38}
-            height={32}
-            className="h-8 w-auto object-contain"
+            width={40}
+            height={35}
+            className="object-contain"
           />
           <div className="hidden sm:block whitespace-nowrap">
             <span className="text-white font-semibold text-sm tracking-wider">
@@ -57,22 +59,24 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden lg:block shrink-0">
-          <Link
-            href="/#join"
+          <a
+            href={SOCIETY_LINKS.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block whitespace-nowrap px-5 py-2 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase hover:bg-yellow-400 transition"
           >
-            Join Society
-          </Link>
+            Join Community
+          </a>
         </div>
 
         {/* Mobile toggle */}
         <button
-          className="lg:hidden text-white"
+          className="lg:hidden w-10 h-10 border border-gray-700 text-white inline-flex items-center justify-center hover:border-yellow-500 hover:text-yellow-500 transition"
           aria-label="Toggle navigation menu"
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(!mobileOpen)}
         >
-          ☰
+          {mobileOpen ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
 
@@ -92,12 +96,14 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/#join"
+            <a
+              href={SOCIETY_LINKS.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
               className="block text-center px-5 py-2 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase hover:bg-yellow-400 transition mt-4"
             >
-              Join Society
-            </Link>
+              Join Community
+            </a>
           </div>
         </div>
       )}

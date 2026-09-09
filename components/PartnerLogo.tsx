@@ -29,12 +29,16 @@ export default function PartnerLogo({
   logoClass?: string;
   pad?: string;
 }) {
-  const logo = useImageWithFallback([
-    `/partners/${partner.slug}.svg`,
-    `/partners/${partner.slug}.png`,
-    `/partners/${partner.slug}.webp`,
-    `/partners/${partner.slug}.jpg`,
-  ]);
+  const logo = useImageWithFallback(
+    partner.logoFile
+      ? [`/partners/${partner.logoFile}`]
+      : [
+          `/partners/${partner.slug}.svg`,
+          `/partners/${partner.slug}.png`,
+          `/partners/${partner.slug}.webp`,
+          `/partners/${partner.slug}.jpg`,
+        ],
+  );
 
   const plated = partner.plate !== false;
 

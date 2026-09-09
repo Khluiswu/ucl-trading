@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s | UCL Trading Society",
   },
   description:
-    "A student society at UCL for anyone interested in markets. Research desks in equities, commodities, fixed income and FX, plus workshops, competitions and industry speakers. Sponsored by Jane Street and Castleton Commodities International, with partnerships across TradingView, Intercontinental Exchange and TraderMath.",
+    "UCL's student-led markets community. Research desks in equities, commodities, fixed income and FX, plus workshops, competitions and industry speakers. Sponsored by Hudson River Trading, Jane Street and Castleton Commodities International.",
   keywords: [
     "UCL",
     "Trading Society",

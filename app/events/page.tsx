@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import SectionHeader from "@/components/SectionHeader";
 import PartnerLogo from "@/components/PartnerLogo";
 import { adm, uclts, partners } from "@/lib/partners";
+import { SOCIETY_LINKS } from "@/lib/society";
 import {
   CalendarDays,
   Mic,
@@ -64,7 +65,7 @@ export default function EventsPage() {
         <SectionHeader
           label="// Events"
           title="Events"
-          description="Our first season, 2026/27. One competition is confirmed and the rest of the calendar is close behind."
+          description="The 2026/27 programme: competitions, technical workshops, career conversations and community events."
         />
 
         {/* FILTER */}
@@ -135,7 +136,7 @@ export default function EventsPage() {
                     </div>
 
                     <p className="text-gray-400 text-sm max-w-2xl leading-relaxed mb-5">
-                      Our first big event, run with TraderMath and ADM,
+                      Our flagship quantitative competition, run with TraderMath and ADM,
                       UCL&apos;s maths society. Teams go head to head on mental
                       maths, probability and market-making games, which is
                       roughly what trading firms put candidates through at
@@ -166,7 +167,7 @@ export default function EventsPage() {
                     DATE ANNOUNCED SOON
                   </p>
                   <a
-                    href="https://www.instagram.com/ucltradingsoc/"
+                    href={SOCIETY_LINKS.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase hover:bg-yellow-400 transition"
@@ -234,7 +235,15 @@ export default function EventsPage() {
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <a
-                  href="https://www.instagram.com/ucltradingsoc/"
+                  href={SOCIETY_LINKS.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-mono text-xs tracking-widest text-yellow-500 hover:text-yellow-400 transition"
+                >
+                  WHATSAPP <ArrowUpRight size={12} />
+                </a>
+                <a
+                  href={SOCIETY_LINKS.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 font-mono text-xs tracking-widest text-yellow-500 hover:text-yellow-400 transition"
@@ -242,15 +251,7 @@ export default function EventsPage() {
                   INSTAGRAM <ArrowUpRight size={12} />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/ucl-trading-soc/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 font-mono text-xs tracking-widest text-yellow-500 hover:text-yellow-400 transition"
-                >
-                  LINKEDIN <ArrowUpRight size={12} />
-                </a>
-                <a
-                  href="https://studentsunionucl.org/clubs-societies/trading-society"
+                  href={SOCIETY_LINKS.studentsUnion}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 font-mono text-xs tracking-widest text-yellow-500 hover:text-yellow-400 transition"
@@ -268,10 +269,10 @@ export default function EventsPage() {
             className="border border-gray-800 bg-gray-900/40 p-16 text-center"
           >
             <CalendarDays size={32} className="text-gray-600 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Nothing here yet</h3>
+            <h3 className="text-xl font-semibold mb-2">Event archive</h3>
             <p className="text-gray-400 text-sm max-w-md mx-auto">
-              We only started in 2026 and the first season hasn&apos;t run.
-              Check back once it has.
+              Event recaps, speaker highlights and competition results will be
+              published here throughout the 2026/27 programme.
             </p>
           </motion.div>
         )}

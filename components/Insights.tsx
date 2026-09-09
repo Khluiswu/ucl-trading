@@ -129,7 +129,7 @@ export default function Insights() {
 
               <div className="md:col-span-3 md:text-right">
                 <span className="font-mono text-xs text-gray-500 tracking-widest">
-                  FIRST ISSUE 2026/27
+                  2026/27 PROGRAMME
                 </span>
               </div>
             </motion.div>
@@ -148,13 +148,11 @@ export default function Insights() {
               <PenLine size={18} className="text-yellow-500" />
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-1">
-                Write the first one
-              </h3>
+              <h3 className="text-lg font-semibold mb-1">Write with us</h3>
               <p className="text-gray-400 text-sm max-w-xl">
-                Fancy writing our first piece, or landing the next interview?
-                You don&apos;t need experience, just something you want to dig
-                into. Send us a pitch.
+                Pitch a market note, sector deep-dive or industry interview.
+                You don&apos;t need previous publishing experience—just a strong
+                question and the commitment to investigate it properly.
               </p>
             </div>
           </div>

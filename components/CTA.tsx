@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { SOCIETY_EMAIL, SOCIETY_LINKS } from "@/lib/society";
 
 export default function CTA() {
@@ -35,28 +35,39 @@ export default function CTA() {
           </span>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Get In <br />
-            <span className="text-yellow-500">Early</span>
+            Join the <br />
+            <span className="text-yellow-500">Community</span>
           </h2>
 
           <p className="text-gray-400 text-lg max-w-xl mx-auto mb-10">
-            We&apos;re only just getting started, so the people who join now get
-            a real say in what this becomes. The first 150 members also get a
-            TradingView subscription.
+            Meet UCL students who take markets seriously. Get event
+            announcements, division updates and opportunities in the society
+            WhatsApp group. The first 150 members also receive a TradingView
+            subscription.
           </p>
 
-          <a
-            href={SOCIETY_LINKS.studentsUnion}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-10 py-5 bg-yellow-500 text-black font-mono text-sm uppercase tracking-widest hover:bg-yellow-400 transition"
-          >
-            Join UCL Trading Society <ArrowRight size={16} />
-          </a>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-4">
+            <a
+              href={SOCIETY_LINKS.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-yellow-500 text-black font-mono text-sm uppercase tracking-widest hover:bg-yellow-400 transition"
+            >
+              Join WhatsApp <MessageCircle size={16} />
+            </a>
+
+            <a
+              href={SOCIETY_LINKS.studentsUnion}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-10 py-5 border border-gray-700 text-white font-mono text-sm uppercase tracking-widest hover:border-yellow-500 hover:text-yellow-500 transition"
+            >
+              Become a Member <ArrowRight size={16} />
+            </a>
+          </div>
 
           <p className="font-mono text-xs text-gray-400 mt-6">
-            Membership opens soon. Add yourself to the mailing list on our
-            Students&apos; Union page and we&apos;ll let you know.
+            Open to every UCL degree and every level of markets experience.
           </p>
 
           <p className="font-mono text-xs text-gray-500 mt-4">

@@ -1,0 +1,170 @@
+%-------------------------
+% Finance-focused resume in LaTeX
+% Template: Jake Gutierrez / sb2nov
+%
+% IMPORTANT: The Systematic Equity Strategy project and several expanded
+% responsibility details were drafted as plausible content at the user's
+% request. Joaquin must verify every claim before submitting this resume.
+%-------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% A4 margins for a readable one-page UK resume.
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Make the generated PDF machine-readable and ATS-friendly.
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-1pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small #1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in,label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.22in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+% Resume
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  \textbf{\Huge \scshape Joaquin Davis} \\ \vspace{2pt}
+  \small Manchester, United Kingdom $|$ +44 7700 900123 $|$
+  \href{mailto:joaquindavis@atomicmail.io}{\underline{joaquindavis@atomicmail.io}} $|$
+  \href{https://linkedin.com/in/joaquindavis}{\underline{linkedin.com/in/joaquindavis}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {BEng Mechanical Engineering --- Expected First Class Honours}{Sep. 2025 -- Jun. 2028}
+    {The University of Manchester $|$ Year 1 Average: 78\%}{Manchester, UK}
+    \resumeItemListStart
+      \resumeItem{Applied numerical methods, statistics and optimisation to engineering problems using Python and MATLAB, with a focus on interpreting model outputs and testing assumptions.}
+    \resumeItemListEnd
+  \resumeSubheading
+    {A-Levels: Mathematics (A*), Further Mathematics (A*), Physics (A*), Economics (A*)}{Sep. 2023 -- Jun. 2025}
+    {Westminster School $|$ EPQ (A*): Optimising Heat Exchanger Design Using CFD}{London, UK}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Summer Investment Analyst}{Jun. 2026 -- Aug. 2026}
+    {Thornwood Capital Management LLP}{London, UK}
+    \resumeItemListStart
+      \resumeItem{Built and backtested Python portfolio-risk models on 5+ years of equity data, identifying changes that improved risk-adjusted returns by 12\%.}
+      \resumeItem{Automated regulatory reporting workflows, saving 30 hours per quarter and eliminating manual errors from quarterly submissions.}
+      \resumeItem{Analysed financial statements, valuation multiples and earnings drivers for industrial companies, supporting equity screening and investment idea generation.}
+      \resumeItem{Performed ESG due diligence on industrial equities and produced research on manufacturing transition risks for presentation to the investment committee.}
+      \resumeItem{Presented model outputs and sensitivity analysis to senior investors, translating technical findings into concise portfolio recommendations.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Selected Projects}
+\resumeSubHeadingListStart
+  % DRAFT CLAIMS: verify the entire project with Joaquin before use.
+  \resumeProjectHeading
+    {\textbf{Systematic Equity Strategy Research} $|$ \emph{Python, pandas, NumPy}}{Jan. 2026 -- May 2026}
+    \resumeItemListStart
+      \resumeItem{Built a rules-based FTSE 350 equity screen combining value, quality and momentum signals to rank companies and construct a diversified long-only portfolio.}
+      \resumeItem{Cleaned price and fundamental data and ran walk-forward backtests incorporating transaction costs; evaluated Sharpe ratio, drawdowns, turnover and sector exposures.}
+      \resumeItem{Produced an investment memo comparing performance with the FTSE All-Share and documenting survivorship bias, overfitting risk and other model limitations.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{Autonomous Line-Following Robot} $|$ \emph{C++, Python, Arduino, PID Control}}{Feb. 2026 -- May 2026}
+    \resumeItemListStart
+      \resumeItem{Designed and programmed an IR-sensor autonomous robot; tuned its PID control loop to sub-100 ms response times and placed 3rd of 45 teams.}
+      \resumeItem{Integrated ultrasonic obstacle detection and Bluetooth telemetry, then built a Python dashboard for real-time diagnostics and performance analysis.}
+      \resumeItem{Structured repeated track tests, analysed sensor data and iterated parameters under time constraints, demonstrating an evidence-based approach to optimisation.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------LEADERSHIP-----------
+\section{Leadership \& Activities}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Mechanical Engineering Representative}{Oct. 2025 -- Present}
+    {Manchester Engineering Society, University of Manchester}{Manchester, UK}
+    \resumeItemListStart
+      \resumeItem{Organised three networking events with Rolls-Royce and Siemens for 120+ attendees, securing two follow-on mentoring partnerships.}
+      \resumeItem{Represented student priorities to faculty and successfully advocated for additional MATLAB tutorials and expanded 3D-printing lab access.}
+    \resumeItemListEnd
+
+  \resumeSubheading
+    {Head of Outreach}{Sep. 2024 -- Jun. 2025}
+    {Westminster Engineering Society}{London, UK}
+    \resumeItemListStart
+      \resumeItem{Founded and led a STEM outreach programme delivering weekly robotics and coding workshops to 200+ pupils across five partner schools.}
+      \resumeItem{Raised \pounds3,500 from local engineering firms by preparing sponsorship proposals, managing partner relationships and allocating funds across equipment and competition fees.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------SKILLS-----------
+\section{Skills \& Interests}
+\begin{itemize}[leftmargin=0.15in,label={}]
+  \small{\item{
+    \textbf{Finance:} Equity research, financial statement analysis, comparable-company analysis, portfolio risk modelling, strategy backtesting, ESG due diligence \\
+    \textbf{Technical:} Python (pandas, NumPy, Matplotlib), Excel, PowerPoint, MATLAB/Simulink, C++, SolidWorks, CATIA V5, ANSYS, Arduino, LabVIEW \\
+    \textbf{Languages:} English (native), Spanish (fluent), French (intermediate) \\
+    \textbf{Interests:} Rowing (Manchester Head Regatta 2026), debating (Oxford Union Schools' Semi-Finalist), violin
+  }}
+\end{itemize}
+
+\end{document}

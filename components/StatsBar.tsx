@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import { sponsors, partners } from "@/lib/partners";
 
 const stats = [
-  { label: "Founded", value: 2026, suffix: "", animate: false },
-  { label: "Divisions Launching", value: 4, suffix: "", animate: true },
-  { label: "Sponsors & Partners", value: 5, suffix: "", animate: true },
+  { label: "Research Divisions", value: 4, suffix: "", animate: true },
+  { label: "Sponsors", value: sponsors.length, suffix: "", animate: true },
+  { label: "Industry Partners", value: partners.length, suffix: "", animate: true },
   { label: "TradingView Subscriptions", value: 150, suffix: "", animate: true },
   { label: "Committee Members", value: 7, suffix: "", animate: true },
 ];

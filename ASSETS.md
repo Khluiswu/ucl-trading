@@ -22,6 +22,7 @@ separate groups on the site. Keep that distinction when adding anyone new.
 | `ice.png`           | Intercontinental Exchange           | Partner   | White plate         |
 | `tradermath.svg`    | TraderMath                          | Partner   | Bare, recoloured    |
 | `ibkr.png`          | Interactive Brokers                 | Partner   | Bare, supplied full-colour mark |
+| `maven.png`         | Maven Securities                    | Partner   | Bare; dark type renders white, gold stays gold |
 | `uclts.png`         | UCL Trading Society (our own mark)  | Us        | Bare, already white |
 | `adm.png`           | ADM, UCL Maths Society              | Collab    | Bare, inverted white |
 
@@ -54,6 +55,12 @@ Each logo's height cap is tuned individually in `lib/partners.ts` (`logoClass`)
 so a square mark and a 5:1 wordmark carry equal optical weight. Plates share a
 fixed height but hug the logo's width, so square logos get square-ish plates
 rather than floating in a letterbox.
+
+## Event photography → `public/events/`
+
+| File                          | Use                                  |
+| ----------------------------- | ------------------------------------ |
+| `maven-office-lounge.png`     | Maven London office lounge           |
 
 ## Committee head-shots → `public/team/`
 

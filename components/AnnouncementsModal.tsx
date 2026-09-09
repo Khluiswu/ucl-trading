@@ -117,7 +117,7 @@ export default function AnnouncementsModal() {
                 id="announcements-title"
                 className="font-display text-3xl font-semibold tracking-tight sm:text-4xl"
               >
-                Two launches are on the way.
+                What&apos;s coming up
               </h2>
             </div>
             <div className="flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-gray-500">
@@ -182,7 +182,7 @@ export default function AnnouncementsModal() {
           </div>
 
           <div className="mt-6 flex flex-col gap-4 border-t border-gray-800 pt-5 text-xs text-gray-500 sm:flex-row sm:items-center sm:justify-between">
-            <p>Full details and application links will be added when they go live.</p>
+            <p>Committee details will be added when applications open.</p>
             <button
               type="button"
               onClick={dismiss}

@@ -2,11 +2,21 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Mic, LineChart, Trophy, Users, Sigma } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  CalendarDays,
+  LineChart,
+  Mic,
+  Sigma,
+  Trophy,
+  Users,
+} from "lucide-react";
 import SectionHeader from "@/components/SectionHeader";
 import PartnerLogo from "@/components/PartnerLogo";
 import { adm, uclts, partners } from "@/lib/partners";
 import { SOCIETY_LINKS } from "@/lib/society";
+import { MAVEN_EVENT } from "@/content/maven-event";
 
 const tradermath = partners.find((p) => p.slug === "tradermath")!;
 
@@ -51,6 +61,69 @@ export default function Events() {
           title="2026/27 Programme"
           description="Competitions, technical workshops and conversations with people working across global markets."
         />
+
+        {/* MAVEN IN-HOUSE DAYS */}
+        <motion.div
+          id="maven-in-house-days"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-6 border border-yellow-500/60 bg-gradient-to-br from-yellow-500/[0.07] to-transparent p-8 md:p-10"
+        >
+          <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
+            <div className="flex items-start gap-5">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center border border-yellow-500">
+                <CalendarDays size={21} className="text-yellow-500" />
+              </div>
+
+              <div>
+                <div className="mb-3 flex flex-wrap items-center gap-3">
+                  <span className="bg-green-400 px-2 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-black">
+                    Applications open
+                  </span>
+                  <span className="font-mono text-xs tracking-widest text-gray-400">
+                    24 SEP · 8 OCT 2026
+                  </span>
+                </div>
+
+                <h3 className="mb-2 text-2xl font-bold md:text-3xl">
+                  {MAVEN_EVENT.name}
+                </h3>
+                <p className="mb-4 font-mono text-sm tracking-wider text-yellow-500">
+                  WITH MAVEN SECURITIES
+                </p>
+                <p className="max-w-2xl text-sm leading-relaxed text-gray-400">
+                  Visit Maven&apos;s London office, meet its traders and take part
+                  in market-making activities. Around{" "}
+                  {MAVEN_EVENT.capacityPerDate} students will attend on each
+                  date.
+                </p>
+              </div>
+            </div>
+
+            <div className="shrink-0 lg:text-right">
+              <p className="mb-3 font-mono text-xs tracking-widest text-gray-500">
+                DEADLINE · 15 SEPTEMBER, 11:59 PM
+              </p>
+              <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+                <a
+                  href={MAVEN_EVENT.applicationUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 bg-yellow-500 px-6 py-3 font-mono text-xs uppercase tracking-widest text-black transition hover:bg-yellow-400"
+                >
+                  Apply now <ArrowUpRight size={14} />
+                </a>
+                <Link
+                  href="/events#maven-in-house-days"
+                  className="inline-flex items-center justify-center gap-2 border border-gray-700 px-6 py-3 font-mono text-xs uppercase tracking-widest text-white transition hover:border-yellow-500 hover:text-yellow-500"
+                >
+                  Full details <ArrowRight size={14} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </motion.div>
 
         {/* FLAGSHIP — CONFIRMED */}
         <motion.div

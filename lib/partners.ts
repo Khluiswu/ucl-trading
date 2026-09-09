@@ -23,6 +23,8 @@ export type Org = {
   plate?: boolean;
   /** Flips solid-black artwork to white. Only valid on single-colour marks. */
   invert?: boolean;
+  /** Keeps coloured details intact while remapping dark lettering to white. */
+  recolorDarkToWhite?: boolean;
 };
 
 /**
@@ -68,6 +70,19 @@ export const sponsors: Org[] = [
 ];
 
 export const partners: Org[] = [
+  {
+    slug: "maven",
+    name: "Maven Securities",
+    wordmark: "Maven",
+    logoFile: "maven.png",
+    href: "https://www.mavensecurities.com/",
+    logoClass: "max-h-11",
+    plate: false,
+    recolorDarkToWhite: true,
+    category: "Proprietary Trading",
+    blurb:
+      "A proprietary trading firm using its own capital, quantitative analysis and technology across global financial markets.",
+  },
   {
     slug: "ibkr",
     name: "Interactive Brokers",

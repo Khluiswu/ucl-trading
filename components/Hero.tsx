@@ -63,7 +63,7 @@ export default function Hero() {
               className="flex flex-col sm:flex-row gap-4"
             >
               <a
-                href={SOCIETY_LINKS.whatsapp}
+                href={SOCIETY_LINKS.linktree}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase hover:bg-yellow-400 transition"

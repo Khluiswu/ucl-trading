@@ -1,26 +1,82 @@
 "use client";
 
-const tickerItems = [
-  { symbol: "S&P 500", value: "6,912.40", change: "+0.54%", up: true },
-  { symbol: "NASDAQ", value: "23,148.72", change: "+0.81%", up: true },
-  { symbol: "FTSE 100", value: "9,134.65", change: "+0.28%", up: true },
-  { symbol: "BTC/USD", value: "117,842.00", change: "-0.92%", up: false },
-  { symbol: "ETH/USD", value: "3,486.20", change: "+1.47%", up: true },
-  { symbol: "EUR/USD", value: "1.1742", change: "+0.11%", up: true },
-  { symbol: "GBP/USD", value: "1.3648", change: "-0.06%", up: false },
-  { symbol: "GOLD", value: "3,338.50", change: "+0.39%", up: true },
-  { symbol: "BRENT", value: "68.74", change: "-1.05%", up: false },
-  { symbol: "US 10Y", value: "4.28%", change: "-3bp", up: false },
-  { symbol: "VIX", value: "16.42", change: "+2.18%", up: true },
-  { symbol: "NIKKEI 225", value: "40,163.90", change: "+0.66%", up: true },
+import { useEffect, useState } from "react";
+
+type TickerItem = {
+  symbol: string;
+  value: string;
+  change: string;
+  up: boolean;
+};
+
+type MarketResponse = {
+  items?: TickerItem[];
+  updatedAt?: string;
+};
+
+const tickerFallback: TickerItem[] = [
+  { symbol: "S&P 500", value: "7,636.36", change: "+0.06%", up: true },
+  { symbol: "NASDAQ", value: "26,253.34", change: "+0.59%", up: true },
+  { symbol: "FTSE 100", value: "10,670.06", change: "-0.80%", up: false },
+  { symbol: "BTC/USD", value: "77,852.15", change: "-2.47%", up: false },
+  { symbol: "ETH/USD", value: "2,445.24", change: "-1.43%", up: false },
+  { symbol: "EUR/USD", value: "1.1640", change: "+0.47%", up: true },
+  { symbol: "GBP/USD", value: "1.3550", change: "+0.49%", up: true },
+  { symbol: "GOLD", value: "4,447.70", change: "-0.98%", up: false },
+  { symbol: "BRENT", value: "102.34", change: "+7.14%", up: true },
+  { symbol: "US 10Y", value: "4.84%", change: "+4.10bp", up: true },
+  { symbol: "VIX", value: "16.46", change: "+14.94%", up: true },
+  { symbol: "NIKKEI 225", value: "65,142.78", change: "+1.45%", up: true },
 ];
 
 export default function Ticker() {
+  const [tickerItems, setTickerItems] = useState(tickerFallback);
+  const [updatedAt, setUpdatedAt] = useState<string>();
   const items = [...tickerItems, ...tickerItems];
+
+  useEffect(() => {
+    let active = true;
+
+    async function refreshMarkets() {
+      try {
+        const response = await fetch("/api/markets", { cache: "no-store" });
+        if (!response.ok) return;
+
+        const payload = (await response.json()) as MarketResponse;
+        if (!active || !payload.items?.length) return;
+
+        const updates = new Map(
+          payload.items.map((item) => [item.symbol, item]),
+        );
+        setTickerItems((current) =>
+          current.map((item) => updates.get(item.symbol) ?? item),
+        );
+        setUpdatedAt(payload.updatedAt);
+      } catch {
+        // Keep the latest known prices if the delayed feed is temporarily unavailable.
+      }
+    }
+
+    void refreshMarkets();
+    const refreshTimer = window.setInterval(refreshMarkets, 5 * 60 * 1000);
+
+    return () => {
+      active = false;
+      window.clearInterval(refreshTimer);
+    };
+  }, []);
+
+  const priceTimestamp = updatedAt
+    ? new Intl.DateTimeFormat("en-GB", {
+        dateStyle: "medium",
+        timeStyle: "short",
+      }).format(new Date(updatedAt))
+    : "latest available snapshot";
 
   return (
     <div
-      aria-label="Market price ticker"
+      aria-label="Delayed market price ticker"
+      title={`Delayed market prices · Updated ${priceTimestamp}`}
       className="fixed top-0 left-0 right-0 z-50 h-8 bg-black border-b border-gray-800 overflow-hidden"
     >
       <div className="flex items-center h-full whitespace-nowrap animate-scroll">

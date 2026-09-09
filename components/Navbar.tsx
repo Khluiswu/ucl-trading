@@ -60,7 +60,7 @@ export default function Navbar() {
         {/* CTA */}
         <div className="hidden lg:block shrink-0">
           <a
-            href={SOCIETY_LINKS.whatsapp}
+            href={SOCIETY_LINKS.linktree}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block whitespace-nowrap px-5 py-2 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase hover:bg-yellow-400 transition"
@@ -97,7 +97,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href={SOCIETY_LINKS.whatsapp}
+              href={SOCIETY_LINKS.linktree}
               target="_blank"
               rel="noopener noreferrer"
               className="block text-center px-5 py-2 bg-yellow-500 text-black font-mono text-xs tracking-widest uppercase hover:bg-yellow-400 transition mt-4"
